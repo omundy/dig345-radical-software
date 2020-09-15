@@ -5,6 +5,20 @@ Coming soon
 
 
 
+
+
+
+## Class files
+
+
+### Sample Projects
+
+- https://github.com/omundy/sample-extension-listener
+
+
+
+
+
 ## Installing Node
 
 Coming soon
@@ -31,6 +45,3 @@ Before installing linters in Atom install Node/NPM ([this link](https://www.tech
 ### Mac
 
 - Mac instructions: [Set up localhost on macOS High Sierra (Apache, MySQL, and PHP 7) with SSL/HTTPS](https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps)
-
-
-
