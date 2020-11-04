@@ -1,4 +1,4 @@
-# dig345 Critical Software
+# DIG 345 Radical Software
 
 Coming soon
 
