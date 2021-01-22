@@ -1,8 +1,10 @@
-# DIG 345 Radical Software
 
-Coming soon
+![simple net art diagram](images/simple-net-art-diagram/simple-net-art-diagram-150w.png)
 
 
+# DIG 345 - Radical Software
+
+Tutorials, demos, and resources for DIG 345 Radical Software
 
 
 
@@ -10,38 +12,13 @@ Coming soon
 
 ## Class files
 
+https://github.com/omundy/learn-javascript
 
 ### Sample Projects
 
-- https://github.com/omundy/sample-extension-listener
-
-
-
-
-
-## Installing Node
-
-Coming soon
-
-
-
-
-1. homebrew
-1. NVM
-
-
-
-
-## Installing Linters in Atom
-
-Before installing linters in Atom install Node/NPM ([this link](https://www.techgrapple.com/fixing-linter-error-linter-csslint-error-while-running-csslint/) will tell you how to fix missing csslinter)
-
-
-
-
-
-## Install Apache, PHP, MySQL, HTTPS
-
-### Mac
-
-- Mac instructions: [Set up localhost on macOS High Sierra (Apache, MySQL, and PHP 7) with SSL/HTTPS](https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps)
+- Node Express
+	- https://github.com/omundy/sample-node-express-site
+	- https://github.com/omundy/sample-node-osm-leaflet
+- Browser Extensions
+	- https://github.com/omundy/sample-extension-listener
+	- https://github.com/omundy/sample-extension-github-tools
