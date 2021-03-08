@@ -7,7 +7,9 @@
 Tutorials, demos, and resources for DIG 345 Radical Software
 
 
+## Tutorials
 
+Thinking Through Data [Youtube Playlist](https://www.youtube.com/playlist?list=PLhpnnpt3tw-SGxCwGuTLMgKpf4I74Ftdn)
 
 
 ## Class files
