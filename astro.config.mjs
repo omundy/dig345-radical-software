@@ -8,7 +8,7 @@ export default defineConfig({
     base: '/dig345-radical-software',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'DIG 345 Radical Software',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
             editLink: {
                 baseUrl: 'https://omundy.github.io/dig345-radical-software',
