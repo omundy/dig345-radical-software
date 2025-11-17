@@ -4,8 +4,8 @@ description: Install and learn the basics of Astro and Starlight
 layout: default
 # draft: true
 lastUpdated: 2025-11-14
-sidebar:
-  order: 2
+# sidebar:
+#   order: 2
 #   label: Astro Starlight 
 ---
 
@@ -40,13 +40,9 @@ npm create astro@latest -- --template starlight
 npm run dev
 ```
 
-<details>
-<summary>See also</summary>
+> The above steps are shown in [Starlight Getting Started](https://starlight.astro.build/getting-started/). You can also explore Astro on its own through their [docs](https://docs.astro.build/en/install-and-setup/) or various [tutorials](https://kinsta.com/blog/astro-js/) online.
 
-[Starlight Getting Started](https://starlight.astro.build/getting-started/)
-
-</details>
-
+<!-- NOTE: Consider adding Astro standalone tutorial -->
 
 
 

@@ -4,8 +4,8 @@ description: Install and learn the basics of Astro and Starlight
 layout: default
 # draft: true
 lastUpdated: 2025-11-14
-sidebar:
-  order: 2
+# sidebar:
+#   order: 99
 #   label: Astro Starlight 
 ---
 
