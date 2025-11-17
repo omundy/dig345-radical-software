@@ -92,7 +92,7 @@ description: Get started building your docs site with Starlight.
 1. Follow the [Sound & Music tutorial](tutorials/sound-music) to learn Tone.js and Strudel.
 1. Continue learning Strudel on their [workshop](https://strudel.cc/workshop/first-sounds/)
 1. Explore the [device motion](https://strudel.cc/learn/devicemotion/) and [input devices](https://strudel.cc/learn/input-devices/)
-1. Design and code an interactive experience that makes use of studel. Consider using shapes, color, and other visuals in addition to sounds.
+1. Design and code an interactive experience that makes use of studel. Consider using shapes, color, and other visuals in addition to sounds. It should have ...
 1. Post and "about" page on your Jamstack site with a screenshot, video, and 100-150 word statement about the concept and technology
 
 </div>

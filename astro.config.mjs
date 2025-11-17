@@ -1,12 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mdx from '@astrojs/mdx'
+import relativeLinks from 'astro-relative-links'
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://omundy.github.io',
 	base: '/dig345-radical-software',
 	integrations: [
+		relativeLinks(),
 		starlight({
 			title: 'DIG 345 Radical Software',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
