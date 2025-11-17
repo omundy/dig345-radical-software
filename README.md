@@ -1,5 +1,5 @@
 
-![simple net art diagram](images/simple-net-art-diagram/simple-net-art-diagram-150w.png)
+![simple net art diagram](public/images/simple-net-art-diagram/simple-net-art-diagram-150w.png)
 
 
 # DIG 345 - Radical Software

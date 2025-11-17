@@ -24,6 +24,28 @@ This tutorial will guide you to create an Astro Starlight documentation website 
 Read on to install, configure, and publish an Astro website.
 
 
+<details>
+<summary>Using Astro only</summary>
+
+Using Astro on its own is also a great choice. I discuss my experiences with Astro on its own in this post, [Convert a PHP/MySQL site to Jamstack and host on Github Pages](https://owenmundy.com/blog/2025/11/convert-a-php-mysql-site-to-jamstack-and-host-on-github-pages/), and talk about my experience rebuilding this [site](https://omundy.github.io/camplajolla/) by starting with this [theme](https://github.com/incluud/accessible-astro-starter).
+
+
+- https://docs.astro.build/en/install-and-setup/
+- Themes
+  - https://github.com/incluud/accessible-astro-starter
+  - https://astro-bootstrap.github.io/
+  - https://github.com/lauroguedes/bloomfolio
+  - https://yashjawale.in/saral-theme-astro/blog/
+
+</details>
+
+
+
+
+
+
+
+
 
 ## 👉 Install Astro Starlight 
 

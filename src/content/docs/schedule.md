@@ -30,6 +30,7 @@ description: Get started building your docs site with Starlight.
 
 1. Before class
 	1. 📚 Reading(s)
+	1. 🎬 Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE)
 1. In class 
 	1. [Astro Starlight](tutorials/astro-starlight/) tutorial
 
@@ -50,6 +51,12 @@ description: Get started building your docs site with Starlight.
 
 
 
+
+
+
+
+
+
 ## Week 2
 
 
@@ -57,6 +64,11 @@ description: Get started building your docs site with Starlight.
 
 
 #### 2-1 Vercel
+
+
+Might use this? 
+https://docs.google.com/document/d/1caPqg3nRV4VFWZVMy-ujeGHbPA11CmUReCon8_d8MVQ/edit?tab=t.0
+
 
 
 <div class="calloutBox">
@@ -103,12 +115,17 @@ description: Get started building your docs site with Starlight.
 
 
 
-## Week 4
+## Week 4 - Reactivity
 
 
 #### 4-1
 
-
+1. Before class
+   1. [React in 100 Seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+   1. 🎬 Heydon Pickering [What Is React.JS?](https://www.youtube.com/watch?v=BO71b3l22mM)
+1. In class 
+   1. [Three.js installation](https://threejs.org/manual/#en/installation) 
+   
 #### 4-1 
 
 
@@ -121,6 +138,7 @@ description: Get started building your docs site with Starlight.
 </div>
 
 
+	
 
 
 
@@ -132,6 +150,7 @@ description: Get started building your docs site with Starlight.
 
 1. Before class
 	1. 📚 Read [0:Welcome](https://discoverthreejs.com/book/introduction/)
+	1. 🎬 Heydon Pickering [What's The Deal With Large Language Models?](https://www.youtube.com/watch?v=rchEbQNMepw)
 1. In class 
 	1. [Three.js installation](https://threejs.org/manual/#en/installation) 
 
