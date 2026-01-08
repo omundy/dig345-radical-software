@@ -1,0 +1,36 @@
+/* Import Tailwind CSS and modify */
+
+/* @import "tailwindcss"; */
+/* same as below */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base); 
+@import "tailwindcss/utilities.css" layer(utilities);
+
+
+/* Add base styles that Tailwind removed in preflight */
+/* https://tailwindcss.com/docs/preflight#lists-are-unstyled */
+main ol,
+main ul:not([role='tablist']), /* don't affect tabs*/
+main menu {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+main ol {
+    list-style-type: decimal;
+}
+main ul:not([role='tablist']) {
+    list-style-type: disc;
+}
+
+main ul li:not(.tab) {
+    display: list-item;
+    unicode-bidi: isolate;
+}
+
+/* testing */
+/* main ul:not([role='tablist']) { color:red}
+main ul li:not(.tab) { color:green} */

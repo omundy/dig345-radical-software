@@ -1,8 +1,81 @@
 
-
 main h1 { font-size: 2rem;}
 main h2 { font-size: 1.8rem;}
 main h3 { font-size: 1.6rem;}
 main h4 { font-size: 1.4rem;}
 main h5 { font-size: 1.2rem;}
 main h6 { font-size: 1rem;}
+
+
+figure { font-size: .9rem; line-height: 1.2rem; display: block; margin-bottom: 2rem; }
+figure img { display: block; margin-bottom: .5rem;}
+
+
+
+/* This template uses CSS --vars and a palette from coolers.co:  
+https://coolors.co/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+*/
+:root {
+  --atom-purple: #BE56DDff;
+  --atom-blue: #3E9FEFff;
+  --atom-cyan: #38B3C2ff;
+  --atom-green: #87C35Cff;
+  --atom-gold: #E5B459ff;
+  --atom-orange: #E1964Fff;
+  --atom-rose: #ED5B66ff;
+  --atom-red: #CE3F32ff;
+}
+.purple {
+  background-color: var(--atom-purple);
+}
+.blue {
+  background-color: var(--atom-blue);
+}
+.cyan {
+  background-color: var(--atom-cyan);
+}
+.green {
+  background-color: var(--atom-green);
+}
+.gold {
+  background-color: var(--atom-gold);
+}
+.orange {
+  background-color: var(--atom-orange);
+}
+.rose {
+  background-color: var(--atom-rose);
+}
+.red {
+  background-color: var(--atom-red);
+}
+
+
+
+
+.box-callout {
+	border: 3px solid #999;
+	padding: 1rem;
+}
+.border-purple { border-color: var(--atom-purple); }
+.border-blue { border-color: var(--atom-blue); }
+.border-cyan { border-color: var(--atom-cyan); }
+.border-green { border-color: var(--atom-green); }
+.border-gold { border-color: var(--atom-gold); }
+.border-orange { border-color: var(--atom-orange); }
+.border-rose { border-color: var(--atom-rose); }
+.border-red { border-color: var(--atom-red); }
+
+
+/* Custom callout for article summaries */
+
+.sl-markdown-content .callout-intro {
+  border-left: 4px solid #c2c2c2;
+	padding: 1rem;
+  background-color: #f5f5f5;
+}
+.sl-markdown-content .inline-icon {
+  display: inline;
+}
+.sl-markdown-content ol ol { list-style-type: lower-alpha; } 
+.sl-markdown-content ol ol ol { list-style-type: lower-roman; }

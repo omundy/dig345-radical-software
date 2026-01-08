@@ -1,0 +1,138 @@
+---
+title: Examples
+description: Links, references, and footnotes from the book
+banner:
+  content: |
+    ⚠️ These are just examples showing what is possible
+---
+
+## Import and use a component
+
+import { Icon } from '@astrojs/starlight/components';
+
+<Icon name="open-book" class="inline-icon" />  Learn more about [icons](https://starlight.astro.build/reference/icons/#all-icons)
+
+
+import YoutubeVideo from '@/components/YoutubeVideo.astro';
+
+{/* THE OLD WAY
+<div class="not-content">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9mput42uZsQ?si=0RVKFwz3LH_AK_T1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> */}
+
+<div class="max-w-2xl mx-auto not-content">
+  <YoutubeVideo src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+</div>
+
+
+
+## Embeds 
+
+<div class=" not-content">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="dPMxgqj" data-pen-title="JS Color Array" data-editable="true" data-user="owenmundy" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/owenmundy/pen/dPMxgqj">
+    JS Color Array</a> by Owen Mundy (<a href="https://codepen.io/owenmundy">@owenmundy</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://public.codepenassets.com/embed/index.js"></script>
+</div>
+
+
+
+
+## Import and use a component with a slot
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside icon="starlight" title="Watch out!">
+This content was added into the component HTML
+</Aside>
+
+
+
+## Import and use a custom component
+
+import CustomIntro from '@/components/CustomIntro.astro';
+
+<CustomIntro>
+Components can also contain **nested content**.
+</CustomIntro>
+
+
+
+## Asides 
+
+[Asides](https://starlight.astro.build/guides/authoring-content/#asides) can be used in .md files
+
+
+:::note
+A note aside
+:::
+
+:::tip[Custom aside titles]
+An aside with a custom title
+:::
+
+:::tip{icon="heart"}
+Custom aside icons
+:::
+
+:::caution
+A caution aside
+:::
+
+:::danger
+A danger aside
+:::
+
+
+
+## Discussion
+
+
+<details>
+<summary>@xtine - Custom Intro Alternatives</summary>
+
+
+
+<div class="callout-intro">
+Create a basic web page using Codepen.io. (bare bones)
+</div>
+
+
+<div class="callout-intro">
+<b><Icon name="open-book" class="inline-icon" /> Overview</b><br/>
+Create a basic web page using Codepen.io. (bare bones)
+</div>
+
+
+👉 Create a basic web page using Codepen.io. (bare bones)
+
+
+```bash frame="none"
+👉 Create a basic web page using Codepen.io. [frame method]
+```
+
+```bash title=""
+👉 Create a basic web page using Codepen.io.
+```
+
+
+
+:::note[Overview]{icon="information"}
+👉 Create a basic web page using Codepen.io. ["note" aside]
+:::
+
+
+:::note[Create a basic web page using Codepen.io]{icon="open-book"}
+This exercise appears in Chapter 1 of Critical Web Design. ["info" aside w/ open-book icon]
+:::
+
+
+</details>
+
+
+
+
+
+
+

@@ -1,25 +1,31 @@
+/**
+ * Config file for Astro/Starlight SSG. Other examples:
+ * Astro/Starlight https://github.com/criticalwebdesign/wiki
+ * Astro/Starlight https://github.com/omundy/game-dev-book
+ * Astro https://github.com/omundy/camplajolla
+ */
+
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx'
-import relativeLinks from 'astro-relative-links'
+// import relativeLinks from 'astro-relative-links'
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://omundy.github.io',
 	base: '/dig345-radical-software',
 	integrations: [
-		relativeLinks(),
+		// relativeLinks(),
 		starlight({
 			title: 'DIG 345 Radical Software',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-radical-software' }],
 			editLink: {
 				baseUrl: 'https://omundy.github.io/dig345-radical-software',
 			},
 			sidebar: [
-				{
-					label: 'Home', link: './'
-				},
+				{ label: 'Home', link: './' },
 				{
 					label: 'Schedule',
 					items: [ // Each item here is one entry in the navigation menu.
@@ -33,18 +39,23 @@ export default defineConfig({
 						{ label: 'Weeks 8-15 - Final Project', link: 'schedule#week-8' },
 					],
 				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-				{
-					label: 'Tutorials',
-					autogenerate: { directory: 'tutorials' }, // autogenerate nav
-				},
+				{ label: 'Reference', autogenerate: { directory: 'reference' }, },
+				{ label: 'Tutorials', autogenerate: { directory: 'tutorials' }, }, // autogenerate nav from files in folder
 			],
 			customCss: [
 				'./src/styles/custom.css', // relative path to custom CSS file
+				'./src/styles/global.css', // tailwind CSS 
 			],
+            components: {
+                // Override the default components
+                SiteTitle: './src/components/SiteTitle.astro',
+            },
 		}),
 	],
+	vite: {
+		plugins: [
+			// @ts-ignore or as any
+			tailwindcss(),
+		]
+	},
 });
