@@ -1,125 +1,172 @@
 ---
-title: DIG 345 Radical Software
-description: Get started building your docs site with Starlight.
+title: Schedule
+description: DIG 345 Radical Software course schedule
+# draft: true
+# sidebar:
+#   order: 2
+#   label: Astro Starlight 
 ---
 
+import IconTime from "@/components/IconTime.astro";
+import YoutubeVideo from '@/components/YoutubeVideo.astro';
+import CustomAside from '@/components/CustomAside.astro';
 
-<img src="/dig345-radical-software/images/simple-net-art-diagram/simple-net-art-diagram-250w.png" alt="" />
-
-
-## Syllabus
-
+<CustomAside type="overview">
+1. Each section below describes learning outcomes this course.
+1. For each, follow the instructions, adding content when prompted with ✏️
+1. Review course content as needed. You may need to read the documentation as well.
+</CustomAside>
 
 
 
 {/* 
 
-References / Other sites
+## Outline
 
-https://github.com/teaching-lab/stack-cs-activities/tree/master/activities/code-puzzle
-https://docs.google.com/document/d/1rLLccDq5yWtQMUrWSL9yncfz8KTzcERRh-u74tZ0SHA/edit?tab=t.0
-https://psyteachr.github.io/ug1-practical/a-lab-2.html
+1. Overview
+   1. Learning Outcomes
+   1. Instructions (Details)
+1. Tutorial
 
+
+
+1. Before class
+	1. 📚 Reading(s)
+1. In class 
+	1. Install Node.js tutorials
+	1. Demo 
+
+
+TO ADD
+
+#hacking #adapters
+https://www.flong.com/archive/projects/free-universal-construction-kit/index.html
+
+
+## Tutorials
+
+- https://github.com/omundy/learn-javascript
+- https://github.com/omundy/sample-node-tools
+- [Radical Software - Tutorials Playlist](https://www.youtube.com/playlist?list=PLhpnnpt3tw-SGxCwGuTLMgKpf4I74Ftdn)
+
+
+ */}
+
+
+
+## 1-2 Introduction 
+
+<CustomAside type="discussion" oneline="true">First day activity 
+<IconTime>:20 min</IconTime></CustomAside>
+
+
+
+{/* 
+Give them a simple course-related task to complete, and offer a brief injunction before they start: 
+*/}
+
+##### Part 1
+
+1. **Pair up** (ideally with someone you haven't met previously) and introduce yourself.
+1. **Discuss** How do you define "[radical](https://www.oed.com/dictionary/radical_adj?tl=true) software"? Find an example and explain why it fits.
+1. **Write** a short list of steps (as pseudocode) for someone who might act out the tasks of a simple example of radical software. A human should be able to perform the steps (as if testing them) in less than 5 minutes. Your software need not be intentionally good or bad—just functional. There are no wrong answers!
+
+#### Part 2
+
+1. **Join** with another pair to form a group of 2 pairs.
+1. **Perform** the pseudocode steps from the other pair while they watch and take notes. You can ask for guidance to keep moving, but try to interpret as best as you can on your own. 
+1. **Switch** and perform the other group's "software".
+1. **Make** notes to share with the class 
+   1. Did the other pair follow the steps as you "coded" them? What went wrong (or right)?
+   1. How do the outcomes change or depend based on who codes the software and their motivations?
+   1. What is "radical software?"
+
+{/* 
+Part 3
+- Which strategies have been effective, or ineffective, for you in the past?
+- in order to understand, and build "radical software", make a list of individual actions they will need to take to do well in the course, and a list of actions they would like to see taken by you and their peers. Those lists can be shared and discussed in class, or afterward on the learning-management system
 */}
 
 
 
-## Assignments
 
 
+## 1-3 Node.js
+
+<CustomAside type="tech">This [Introduction to NPM and Node](https://omundy.github.io/learn-javascript/topics/node/slides.html) tutorial builds a foundation for what you will learn in this class. I will demonstrate the first few steps and then turn it over to you to complete in-class/@home. Save the information with the ✏️ which you will enter in your DevLog.
+<IconTime>:40 min</IconTime></CustomAside>
 
 
-### Reading Responses 
+<div class="box-callout">
 
-{/* TODO */}
+### DevLog 1-3 
 
+Create a Node.js project and publish it on Github
 
+1. Install and use Node.js on your machine
+1. Confirm your Node version ✏️`VERSION_NUMBER`
+1. Run a script with Node.js
+1. Initialize a new project with NPM
+1. Install Nodemon globally to automatically reload scripts
+1. Install the Cron NPM package and use it in a script
+1. [Look up](https://crontab.guru) the cron expression for "every 10 minutes". Test it and add it ✏️`HERE` {/* https://crontab.guru/every-10-minutes */}
+1. Create a Git repo and commit a `.gitignore` file
+1. Publish the repo on Github. Add the link ✏️ HERE
+1. Turn it in by posting the Github link in Moodle
 
-### Git Milestones
+</div>
 
-Git and Github will be essential in this class. Post a link to your finished (both part 1 and 2) [Git Milestones](https://github.com/omundy/learn-git-milestones) repo in Moodle. If you have completed this previously then re-post.
-
-
-
-
-### DevLog (Tech Homework & Exercises)
-
-The DevLog will be a journal of your learning progress (technical and otherwise). Each week you will write about and document what you learn in class exercises and your tech book, adding text, images, and other media to reinforce concepts from the course. Describing new materials in your own words not only increases learning, but also allows you to track your progress, debug and share your solutions to design and technical problems, and refer back to this material after this semester. We will review this document several times in class. Keep notes about the work you do using this structure:
-
-
-1. Create a Google Doc to add text, images, links to tutorials, code, examples, etc.
-1. Use basic rich text formatting to distinguish weeks/sections.
-1. Share it me (I should be able to add comments) and make it visible by everyone at Davidson (so we can share in group activities)
-1. In class, simply show me these things are working and be ready to answer questions about them.  
-1. Just post the same link in Moodle where prompted so I can find it.
-
-
-
-
-
-
-
-
-## Potential Presentation Subjects
-
-Find
-1. A cultural item
-1. A theory
-1. An example that might be inspired by this concept 
-
-
-- Early generative art: Sol LeWitt, [Stanley Brouwn](https://www.moma.org/artists/29982-stanley-brouwn), Georg Nees, Frieder Nake, Vera Molnár, Sonia Landy Sheridan, and [Lillian Schwartz](https://www.youtube.com/watch?v=XAlXN-F2vPQ)
-- Demoscene
+:::caution
+Git is required for all course assignments. Complete parts 1 & 2 of the [Git Milestones](https://github.com/omundy/learn-git-milestones) if you have not already.
+:::
 
 
 
 
 
-## Recreate an existing work
 
-Prompt 8.3 Add New Data to Your Project
-It’s impressive how using variables and functions keeps the code modular, which organizes
-it and makes the code easy to build on. What would Jean Arp think? Now that you have a
-handle
-on using loops, arrays, and SVGs to create a generative work, continue to experiment
-with the interface, parameters,
-and concepts of your project
-as you create a generative
-browser experience inspired by the history of art and interactivity. Think about replayability
-as you do to encourage users to return to and play with your work as they experience
-new outcomes.
-Here
-are some potential components you could include in your idea and execution:
-1. Randomness/chance—Consider
-reflecting on the tension between decisions/definitions
-created by the artist/author and the elements
-that are left to randomization/chance.
-2. Color generation—Will
-color information be purely random, or influenced by other
-factors
-like time, interactivity, or other data?
-3. Composition and form—What
-rules will
-you use in creating and positioning objects?
-4. Sound/multimedia—How
-might sound or other media add to your ideas?
-5. Rules—How
-will
-decisions you make be informed by the work you are inspired by? How
-might you put your project
-in conversation with art history? Think also about the discussion
-of fair use, notably with respect
-to the notion of transformation, in chapter 2.
-6. Customization(s)—What
-interactivity might you add to allow the viewer to appreciate,
-modify, or play with the work? How might you encourage replayability as users return
-or revisit the page?
-Regardless of your approach, your project
-should mimic or somehow find inspiration in
-these
-processes
-to reflect your own thinking on the subject.
-—-
+
+## 2-1 Astro.js
+
+<CustomAside type="homework" reference="(before class)">
+
+- ✅ Complete ^ DevLog 1-3 and post link on Moodle.
+- Start (if you have not already completed) the [Git Milestones](https://github.com/omundy/learn-git-milestones)
+- Read 📚 / Watch 🎬 the [Astro Starlight](tutorials/astro-starlight/) article up to "Tutorial"
+- Watch 🎬 Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE)
+
+</CustomAside>
+
+<figure>
+<div class="max-w-3xl mx-auto not-content">
+  <YoutubeVideo src="https://www.youtube.com/watch?v=LbjxvvKEtyE" />
+</div>
+{/* Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE) */}
+</figure>
+
+
+
+<CustomAside type="tech">Follow the [Astro Starlight](tutorials/astro-starlight/) tutorial to create a Jamstack website using the Astro.js Static Site Generator (SSG). You will add to this site DevLog entries to record your work throughout the semester. 
+<IconTime>:40 min</IconTime></CustomAside>
+
+<div class="box-callout">
+
+### DevLog 2-1 
+
+Create an Astro Starlight 'DevLog' site.
+
+1. Create an Astro/Starlight site to post your work this semester and update project structure
+1. Publish Astro/Starlight using Github Actions ✏️ LINK_TO_YOUR_REPO
+1. Add custom CSS to your theme
+1. Import and use an Astro component
+1. Continue customizing your site using the [Starlight Docs](https://starlight.astro.build/getting-started/) and ✏️ explain what you did.
+1. Compare your repo to the example [omundy/dig345-devlog](https://github.com/omundy/dig345-devlog) and update anything you missed. 
+1. Add a DevLog file `devlog-2-1.mdx` in your repo.
+1. Watch 🎬 Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE). Post a reading response in this DevLog per information in the [Assignments](./#assignments).
+1. Write a reflection explaining what you did learned in this DevLog. Link to sources.
+1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
+
+</div>
 
 
 
@@ -129,35 +176,275 @@ to reflect your own thinking on the subject.
 
 
 
+## 2-2 Node/Express
+
+<CustomAside type="homework" reference="(before class)">
+
+- ✅ Complete ^ DevLog 2-1 (Astro / Starlight) and post link on Moodle.
+- Read 📚 Modules 9.2 and 9.3 in Chapter 9 of *Critical Web Design*.
+
+</CustomAside>
 
 
-## Software 
 
-- https://github.com/aagentah/nw_wrld
+## 2-3 Node/Express/Vercel
+
+<CustomAside type="homework">
+
+- ✅ Complete steps 1-5 from DevLog 2-3 (Node/Express) and post link on Moodle.
+- ✅ Complete the [Git Milestones](https://github.com/omundy/learn-git-milestones) and post the link on Moodle.
+- Review 📚 this longer description of front end / back end at the [Odin Project](https://www.theodinproject.com/lessons/nodejs-introduction-to-the-back-end)
+
+</CustomAside>
+
+
+
+<div class="box-callout">
+
+### DevLog 2-3 
+
+#### Create a full stack application using Node and Express
+
+Create a full stack application following the [Bad Password API Node/Express](https://criticalwebdesign.github.io/wiki/chapter-09/9-4-bad-password-api/) tutorial. Copy/paste and complete the following objectives into `devlog-2-3.mdx` in your DevLog.  
+
+1. Fork an existing Github project ([criticalwebdesign/bad-password-api-starter](https://github.com/criticalwebdesign/bad-password-api-starter)) (CWD 9.3)
+1. Connect to a remote API and use JSON data in a frontend (CWD 9.3)
+1. Modify the project structure, install dependencies, and run the project. (CWD 9.4) 
+1. Add a static API route using Express.  (CWD 9.4) 
+1. Add dynamic API routes to Express. (CWD 9.4) 
+1. Create a free Vercel account  (CWD 9.4) 
+1. Deploy your project on Vercel. (CWD 9.4) 
+1. Read 📚 [Hacktivist deletes white supremacist websites live onstage during hacker conference](https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/), TechCrunch 2026 Post a reading response in your DevLog per information in the [Assignments](./#assignments).
+1. Write a reflection explaining what you did learned in your DevLog. Link to sources.
+1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
+
+</div>
+
+
+
 
 
 
 
 {/* 
-import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+Full-Stack Web App Workshop - Davidson Hacks 2024
+https://docs.google.com/document/d/1caPqg3nRV4VFWZVMy-ujeGHbPA11CmUReCon8_d8MVQ/edit?tab=t.0
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid> */}
+- Template (part 1)
+	- Finished repo https://github.com/omundy/sample-node-express-template
+	- Live project https://sample-node-express-template.herokuapp.com/
+- Username Generator (part 2 & 3)
+	- Finished repo https://github.com/omundy/sample-node-express-username-generator
+	- Live project https://sample-node-express-username.herokuapp.com/
+
+- https://github.com/omundy/sample-node-express-username-generator
+- https://github.com/omundy/sample-node-express-site
+- https://github.com/omundy/sample-node-osm-leaflet
+
+ */}
+
+{/* 
+<div class="box-callout border-green"></div>
+ */}
+
+
+
+
+## 3-1 Databases
+
+<CustomAside type="homework">
+
+- ✅ Finish steps 1-10 from DevLog 2-3 (Node/Express) and post your DevLog.
+- Read 📚 [ICE Is Going on a Surveillance Shopping Spree](https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree), EFF 2026
+
+</CustomAside>
+
+
+
+
+
+
+
+
+
+
+
+1. Simple - Google Sheets
+
+https://github.com/jsoma/tabletop
+Save your data https://github.com/omundy/dig345-sample-server 
+Import your data
+https://github.com/xinemata/leafy used to build https://tinytools.directory/
+
+2. MongoDB
+
+
+
+
+
+## 3-2 MongoDB
+
+<CustomAside type="homework" reference="(before class)">
+
+
+- Watch 
+
+
+</CustomAside>
+
+
+
+
+
+
+
+
+
+
+## 4-1 Reactivity
+
+<CustomAside type="homework" reference="(before class)">
+
+{/* - ✅ Complete ^ Node.js introduction and post link on Moodle. */}
+
+- Watch 🎬 [Cory Doctorow - Rescuing the Internet From “Enshittification”](https://www.youtube.com/watch?v=d2e-c9SF5nE)
+
+<figure>
+<div class="max-w-3xl mx-auto not-content">
+  <YoutubeVideo src="https://www.youtube.com/watch?v=d2e-c9SF5nE" />
+</div>
+</figure>
+
+- In-class: 
+
+</CustomAside>
+
+
+
+
+
+
+
+1. Before class
+   1. [React in 100 Seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+   1. 🎬 Heydon Pickering [What Is React.JS?](https://www.youtube.com/watch?v=BO71b3l22mM)
+1. In class 
+   1. [Three.js installation](https://threejs.org/manual/#en/installation) 
+   
+
+
+
+## 4-2 
+
+1.  Create a reactive website
+
+
+
+## 5-1 Sound
+
+
+<div class="box-callout">
+
+#### HW3 - Create an interactive soundscape
+
+1. Follow the [Sound & Music tutorial](tutorials/sound-music) to learn Tone.js and Strudel.
+1. Continue learning Strudel on their [workshop](https://strudel.cc/workshop/first-sounds/)
+1. Explore the [device motion](https://strudel.cc/learn/devicemotion/) and [input devices](https://strudel.cc/learn/input-devices/)
+1. Design and code an interactive experience that makes use of studel. Consider using shapes, color, and other visuals in addition to sounds. It should have ...
+1. Post and "about" page on your Jamstack site with a screenshot, video, and 100-150 word statement about the concept and technology
+
+</div>
+
+
+	
+
+## 5-2 Music 
+
+- https://patatap.com/
+
+
+
+
+## 6-1 Three.js 
+
+
+
+
+
+
+<CustomAside type="homework" reference="(before class)">
+
+1. Read 📚 [0:Welcome](https://discoverthreejs.com/book/introduction/)
+1. 🎬 Heydon Pickering [What's The Deal With Large Language Models?](https://www.youtube.com/watch?v=rchEbQNMepw)
+1. Read 📚 Liz Stinson “[The Ever-Changing Art of the Screensaver.](https://eyeondesign.aiga.org/the-ever-changing-art-of-the-screensaver/)” in Eye on Design
+1. Explore [Generative Practices](https://criticalwebdesign.github.io/wiki/chapter-08/8-1-generative-practices/)
+
+</CustomAside>
+
+
+
+1. In class 
+	1. [Three.js installation](https://threejs.org/manual/#en/installation) 
+
+
+
+
+
+
+## 6-2 Three.js 
+
+1. Before class
+	1. 📚 Read [1:Getting Started](https://discoverthreejs.com/book/first-steps/)
+1. In class 
+	1. TBD tutorial
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 7-1
+
+Final project proposals
+
+
+
+## 7-2
+
+
+## Week 8 Final Project
+
+Final project 
+
+
+## Week 9
+
+Final project
+
+
+## Week 10
+
+Final project
+
+
+## Week 11
+
+Final project
+
+
+## Week 12
+
+Final project
+
+
+## Week 13
+
+Final project
