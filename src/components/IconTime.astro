@@ -1,0 +1,9 @@
+---
+import Icon from "@/components/Icon.astro";
+const props = Astro.props;
+interface Props {
+    time: string;
+}
+---
+
+<Icon type="time" color="gray" weight="normal"><slot /></Icon>
