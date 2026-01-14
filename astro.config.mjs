@@ -18,7 +18,7 @@ export default defineConfig({
 		starlight({
 			title: 'DIG 345 Radical Software',
 			logo: {
-				src: './public/images/simple-net-art-diagram/simple-net-art-diagram-150w.png',
+				src: './public/images/icon-radical-software.svg',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-radical-software' }],
 			editLink: {
