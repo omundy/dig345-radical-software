@@ -19,16 +19,18 @@ main menu {
     padding-inline-start: 40px;
     unicode-bidi: isolate;
 }
-main ol {
-    list-style-type: decimal;
-}
-main ol ol, main ol ol ol,
-main ul ul, main ul ul ul {
-    margin-top: 0 !important;
-}
-main ul:not([role='tablist']) {
-    list-style-type: disc;
-}
+main ol { list-style-type: decimal; }
+main ol ol { list-style-type: lower-alpha; } 
+main ol ol ol { list-style-type: lower-roman; }
+
+main ol ol, 
+main ol ol ol, 
+main ol ol ol ol,
+main ul ul, 
+main ul ul ul, 
+main ul ul ul ul { margin-top: 0 !important; margin-bottom: 0 !important; }
+
+main ul:not([role='tablist']) { list-style-type: disc; }
 
 main ul li:not(.tab) {
     display: list-item;
