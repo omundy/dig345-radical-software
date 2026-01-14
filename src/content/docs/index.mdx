@@ -1,224 +1,93 @@
 ---
-title: Schedule
-description: DIG 345 Radical Software course schedule
-# draft: true
-# sidebar:
-#   order: 2
-#   label: Astro Starlight 
+title: Syllabus
+description: DIG 345 Syllabus
 ---
 
-import IconTime from "@/components/IconTime.astro";
-import YoutubeVideo from '@/components/YoutubeVideo.astro';
-import CustomAside from '@/components/CustomAside.astro';
 
-<CustomAside type="overview">
-1. Each section below describes learning outcomes this course.
-1. For each, follow the instructions, adding content when prompted with ✏️
-1. Review course content as needed. You may need to read the documentation as well.
-</CustomAside>
+<div class="grid grid-cols-3 gap-4 ...">
+	<img src="/dig345-radical-software/images/simple-net-art-diagram/simple-net-art-diagram-250w.png" alt="" />
+	<div class="col-span-2">
 
+		**Radical Software**<br />
+		Spring 2026 / DIG 345<br />
+		M/W/F 11:30am-12:30pm<br />
+		[Film, Media, and Digital Studies](https://www.davidson.edu/academic-departments/film-media-and-digital-studies) / Davidson College<br />
+		[Moodle](https://moodle.davidson.edu) / [Slack](https://radicalsoftwarecourse.slack.com) / [Github](https://github.com/omundy/dig345-radical-software)<br />
+		Instructor: [Owen Mundy](https://www.davidson.edu/people/owen-mundy)<br />
+		Office hours: M/W 12:30–1:30pm VAC 220; Zoom by appointment
 
-
-{/* 
-
-## Outline
-
-1. Overview
-   1. Learning Outcomes
-   1. Instructions (Details)
-1. Tutorial
-
-
-
-1. Before class
-	1. 📚 Reading(s)
-1. In class 
-	1. Install Node.js tutorials
-	1. Demo 
-
-
-TO ADD
-
-#hacking #adapters
-https://www.flong.com/archive/projects/free-universal-construction-kit/index.html
-
-
-## Tutorials
-
-- https://github.com/omundy/learn-javascript
-- https://github.com/omundy/sample-node-tools
-- [Radical Software - Tutorials Playlist](https://www.youtube.com/playlist?list=PLhpnnpt3tw-SGxCwGuTLMgKpf4I74Ftdn)
-
-
- */}
-
-
-
-## 1-2 Introduction 
-
-<CustomAside type="discussion" oneline="true">First day activity 
-<IconTime>:20 min</IconTime></CustomAside>
-
-
-
-{/* 
-Give them a simple course-related task to complete, and offer a brief injunction before they start: 
-*/}
-
-##### Part 1
-
-1. **Pair up** (ideally with someone you haven't met previously) and introduce yourself.
-1. **Discuss** How do you define "[radical](https://www.oed.com/dictionary/radical_adj?tl=true) software"? Find an example and explain why it fits.
-1. **Write** a short list of steps (as pseudocode) for someone who might act out the tasks of a simple example of radical software. A human should be able to perform the steps (as if testing them) in less than 5 minutes. Your software need not be intentionally good or bad—just functional. There are no wrong answers!
-
-#### Part 2
-
-1. **Join** with another pair to form a group of 2 pairs.
-1. **Perform** the pseudocode steps from the other pair while they watch and take notes. You can ask for guidance to keep moving, but try to interpret as best as you can on your own. 
-1. **Switch** and perform the other group's "software".
-1. **Make** notes to share with the class 
-   1. Did the other pair follow the steps as you "coded" them? What went wrong (or right)?
-   1. How do the outcomes change or depend based on who codes the software and their motivations?
-   1. What is "radical software?"
-
-{/* 
-Part 3
-- Which strategies have been effective, or ineffective, for you in the past?
-- in order to understand, and build "radical software", make a list of individual actions they will need to take to do well in the course, and a list of actions they would like to see taken by you and their peers. Those lists can be shared and discussed in class, or afterward on the learning-management system
-*/}
-
-
-
-
-
-## 1-3 Node.js
-
-<CustomAside type="tech">This [Introduction to NPM and Node](https://omundy.github.io/learn-javascript/topics/node/slides.html) tutorial builds a foundation for what you will learn in this class. I will demonstrate the first few steps and then turn it over to you to complete in-class/@home. Save the information with the ✏️ which you will enter in your DevLog.
-<IconTime>:40 min</IconTime></CustomAside>
-
-
-<div class="box-callout">
-
-### DevLog 1-3 
-
-Create a Node.js project and publish it on Github
-
-1. Install and use Node.js on your machine
-1. Confirm your Node version ✏️`VERSION_NUMBER`
-1. Run a script with Node.js
-1. Initialize a new project with NPM
-1. Install Nodemon globally to automatically reload scripts
-1. Install the Cron NPM package and use it in a script
-1. [Look up](https://crontab.guru) the cron expression for "every 10 minutes". Test it and add it ✏️`HERE` {/* https://crontab.guru/every-10-minutes */}
-1. Create a Git repo and commit a `.gitignore` file
-1. Publish the repo on Github. Add the link ✏️ HERE
-1. Turn it in by posting the Github link in Moodle
-
-</div>
-
-:::caution
-Git is required for all course assignments. Complete parts 1 & 2 of the [Git Milestones](https://github.com/omundy/learn-git-milestones) if you have not already.
-:::
-
-
-
-
-
-
-
-## 2-1 Astro.js
-
-<CustomAside type="homework" reference="(before class)">
-
-- ✅ Complete ^ DevLog 1-3 and post link on Moodle.
-- Start (if you have not already completed) the [Git Milestones](https://github.com/omundy/learn-git-milestones)
-- Read 📚 / Watch 🎬 the [Astro Starlight](tutorials/astro-starlight/) article up to "Tutorial"
-- Watch 🎬 Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE)
-
-</CustomAside>
-
-<figure>
-<div class="max-w-3xl mx-auto not-content">
-  <YoutubeVideo src="https://www.youtube.com/watch?v=LbjxvvKEtyE" />
-</div>
-{/* Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE) */}
-</figure>
-
-
-
-<CustomAside type="tech">Follow the [Astro Starlight](tutorials/astro-starlight/) tutorial to create a Jamstack website using the Astro.js Static Site Generator (SSG). You will add to this site DevLog entries to record your work throughout the semester. 
-<IconTime>:40 min</IconTime></CustomAside>
-
-<div class="box-callout">
-
-### DevLog 2-1 
-
-Create an Astro Starlight 'DevLog' site.
-
-1. Create an Astro/Starlight site to post your work this semester and update project structure
-1. Publish Astro/Starlight using Github Actions ✏️ LINK_TO_YOUR_REPO
-1. Add custom CSS to your theme
-1. Import and use an Astro component
-1. Continue customizing your site using the [Starlight Docs](https://starlight.astro.build/getting-started/) and ✏️ explain what you did.
-1. Compare your repo to the example [omundy/dig345-devlog](https://github.com/omundy/dig345-devlog) and update anything you missed. 
-1. Add a DevLog file `devlog-2-1.mdx` in your repo.
-1. Watch 🎬 Heydon Pickering [Why is everything binary?](https://www.youtube.com/watch?v=LbjxvvKEtyE). Post a reading response in this DevLog per information in the [Assignments](./#assignments).
-1. Write a reflection explaining what you did learned in this DevLog. Link to sources.
-1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
-
+	</div>
 </div>
 
 
 
+## Course Description
+
+This course introduces students to advanced interface design and programming concepts for creating and deploying networked technology. In addition to the technology, the course materials and discussions explore the public and private, chaotic and boring, and political and commercial nature of software on the internet. Students will be challenged to conceptualize and execute culturally-relevant web applications using professional tools in order to comment on, critique, or celebrate online culture, and expand our understanding of the web and its possibilities. The tech and skills this course introduces allows for many potential final projects including games, data visualizations, desktop or mobile applications, full-stack web applications, among others.
+
+
+## Learning Objectives
+
+Students who complete this course will be able to:
+
+- Recall important social, cultural, and political challenges facing users, designers, and developers of software in its many forms.
+- Produce idea-driven works of “cultural software” reflecting a high level of critical thought, research, and intentional decision-making.
+- Display an advanced understanding of the components of client/server applications like frontend, backend, data store, APIs, etc.
+- Design, execute and code responsive interfaces at a professional level using Figma/HTML/CSS/Javascript/Bootstrap/Git
+- Plan, construct, and deploy a full stack web application including frontend and backend code, and a database or data source (APIs, JSON, MongoDB, MySQL), using Git and a cloud-based or standard web server.
+- Demonstrate modern Javascript/ECMAScript programming concepts including async-await, promises, node, modules, strict mode, let/const, MVC, etc.  
+- Understand and implement advanced Javascript frameworks, libraries, and tools for creating web apps like NPM, Express, and React.js.
+
+
+
+
+## Prerequisite(s) 
+
+DIG 245 Critical Web Design or experience with [Git](https://github.com/omundy/learn-git-milestones), [HTML](https://www.codecademy.com/learn/learn-html), [CSS](https://www.codecademy.com/learn/learn-css), [JS](https://www.codecademy.com/learn/learn-javascript).
 
 
 
 
 
-
-## 2-2 Node/Express
-
-<CustomAside type="homework" reference="(before class)">
-
-- ✅ Complete ^ DevLog 2-1 (Astro / Starlight) and post link on Moodle.
-- Read 📚 Modules 9.2 and 9.3 in Chapter 9 of *Critical Web Design*.
-
-</CustomAside>
+## General Policies
 
 
+### Engagement
 
-## 2-3 Node/Express/Vercel
+I place a high premium on in-class participation. Your continued engagement with the readings, writing, and your peers is essential to the success of this course. I expect students to bring the day’s readings to class, well-marked up with notes and annotations, and participate in all discussions. Late arrivals or early departures from class are disruptive and should be avoided. Tardiness in particular will affect your engagement grade.
 
-<CustomAside type="homework">
+Daily attendance is required. I understand that you may have to miss class, due to an illness, emergency, or situation out of your control. If you do miss class, it is your responsibility to get the notes and make up work. Please look carefully at the syllabus during the first week of class and speak to me immediately if you know of any issues that will affect your attendance. 
 
-- ✅ Complete steps 1-5 from DevLog 2-3 (Node/Express) and post link on Moodle.
-- ✅ Complete the [Git Milestones](https://github.com/omundy/learn-git-milestones) and post the link on Moodle.
-- Review 📚 this longer description of front end / back end at the [Odin Project](https://www.theodinproject.com/lessons/nodejs-introduction-to-the-back-end)
+### Late Work
 
-</CustomAside>
+Due dates are listed in Moodle. **I always accept late work.**  Note however the maximum grade will be reduced to a `C` if work is received more than 2 weeks late.
+
+### Inclusive Learning
+
+I am committed to the principle of inclusive learning. This means that our classroom, our virtual spaces, our practices, and our interactions are as inclusive as possible. Mutual respect, civility, and the ability to listen and observe others carefully are crucial to inclusive learning.
+
+The college welcomes requests for accommodations related to disability and will grant those that are determined to be reasonable and maintain the integrity of a program or curriculum. To make such a request or to begin a conversation about a possible request, please contact the Office of Academic Access and Disability Resources, which is located in the Center for Teaching and Learning in the E.H. Little Library: Beth Bleil, Director, bebleil@davidson.edu, 704-894-2129; or Alysen Beaty, Assistant Director, albeaty@davidson.edu, 704-894-2939. It is best to submit accommodation requests within the drop/add period; however, requests can be made at any time in the semester. Please keep in mind that accommodations are not retroactive.
+
+### Academic Integrity
+
+Students at Davidson College abide by an Honor Code. The principle of academic integrity is taken very seriously and violations are treated gravely. What does academic integrity mean in this course? Essentially this: when you are responsible for a task, you will perform that task. When you rely on someone else’s work in an aspect of the performance of that task, you will give full credit in the proper, accepted form. To state that another way, I share the definition that Jayme Sponsel and Van E. Hillard used in “Using Sources & Avoiding Plagiarism”...
+
+Plagiarism is using another’s textual, numerical, visual, digital, or sonic material without attribution, giving the appearance that such material is of one’s own creation. 
+
+Another aspect of academic integrity is the free play of ideas. Vigorous discussion and debate are encouraged in this course, with the firm expectation that all aspects of the class will be conducted with civility and respect for differing ideas, perspectives, and traditions. When in doubt (of any kind) please ask for guidance and clarification.
+
+### Classroom Courtesy
+
+While this course embraces the digital world it also recognizes that digital tools and environments complicate personal interactions. Studies have shown that students who use laptops in class often receive lower grades than those who don’t. Even more worrisome are studies that show laptop users distract students around them. I permit laptops and tablets in class, but only when used for classroom activities, such as note-taking or class readings. Occasionally I may ask students to turn off all digital devices.
+
+Text messaging or other cell phone use is unacceptable. Any student whose phone rings during class or who texts in class will be responsible for kicking off the next class day’s discussion.
+
+### Zoom and Class Recordings
+
+We may meet on Zoom sometimes. When we do, I'll try to remember to record lectures. While FERPA allows faculty to use classroom video recordings with students for educational use, note that the recordings will only be available to students in the class through Moodle. If you do not consent to video or audio of yourself in the recording, please let me know.
 
 
 
-<div class="box-callout">
-
-### DevLog 2-3 
-
-#### Create a full stack application using Node and Express
-
-Create a full stack application following the [Bad Password API Node/Express](https://criticalwebdesign.github.io/wiki/chapter-09/9-4-bad-password-api/) tutorial. Copy/paste and complete the following objectives into `devlog-2-3.mdx` in your DevLog.  
-
-1. Fork an existing Github project ([criticalwebdesign/bad-password-api-starter](https://github.com/criticalwebdesign/bad-password-api-starter)) (CWD 9.3)
-1. Connect to a remote API and use JSON data in a frontend (CWD 9.3)
-1. Modify the project structure, install dependencies, and run the project. (CWD 9.4) 
-1. Add a static API route using Express.  (CWD 9.4) 
-1. Add dynamic API routes to Express. (CWD 9.4) 
-1. Create a free Vercel account  (CWD 9.4) 
-1. Deploy your project on Vercel. (CWD 9.4) 
-1. Read 📚 [Hacktivist deletes white supremacist websites live onstage during hacker conference](https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/), TechCrunch 2026 Post a reading response in your DevLog per information in the [Assignments](./#assignments).
-1. Write a reflection explaining what you did learned in your DevLog. Link to sources.
-1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
-
-</div>
 
 
 
@@ -227,224 +96,25 @@ Create a full stack application following the [Bad Password API Node/Express](ht
 
 
 {/* 
-
-Full-Stack Web App Workshop - Davidson Hacks 2024
-https://docs.google.com/document/d/1caPqg3nRV4VFWZVMy-ujeGHbPA11CmUReCon8_d8MVQ/edit?tab=t.0
-
-- Template (part 1)
-	- Finished repo https://github.com/omundy/sample-node-express-template
-	- Live project https://sample-node-express-template.herokuapp.com/
-- Username Generator (part 2 & 3)
-	- Finished repo https://github.com/omundy/sample-node-express-username-generator
-	- Live project https://sample-node-express-username.herokuapp.com/
-
-- https://github.com/omundy/sample-node-express-username-generator
-- https://github.com/omundy/sample-node-express-site
-- https://github.com/omundy/sample-node-osm-leaflet
-
- */}
-
-{/* 
-<div class="box-callout border-green"></div>
- */}
-
-
-
-
-## 3-1 Databases
-
-<CustomAside type="homework">
-
-- ✅ Finish steps 1-10 from DevLog 2-3 (Node/Express) and post your DevLog.
-- Read 📚 [ICE Is Going on a Surveillance Shopping Spree](https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree), EFF 2026
-
-</CustomAside>
-
-
-
-
-
-
-
-
-
-
-
-1. Simple - Google Sheets
-
-https://github.com/jsoma/tabletop
-Save your data https://github.com/omundy/dig345-sample-server 
-Import your data
-https://github.com/xinemata/leafy used to build https://tinytools.directory/
-
-2. MongoDB
-
-
-
-
-
-## 3-2 MongoDB
-
-<CustomAside type="homework" reference="(before class)">
-
-
-- Watch 
-
-
-</CustomAside>
-
-
-
-
-
-
-
-
-
-
-## 4-1 Reactivity
-
-<CustomAside type="homework" reference="(before class)">
-
-{/* - ✅ Complete ^ Node.js introduction and post link on Moodle. */}
-
-- Watch 🎬 [Cory Doctorow - Rescuing the Internet From “Enshittification”](https://www.youtube.com/watch?v=d2e-c9SF5nE)
-
-<figure>
-<div class="max-w-3xl mx-auto not-content">
-  <YoutubeVideo src="https://www.youtube.com/watch?v=d2e-c9SF5nE" />
-</div>
-</figure>
-
-- In-class: 
-
-</CustomAside>
-
-
-
-
-
-
-
-1. Before class
-   1. [React in 100 Seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
-   1. 🎬 Heydon Pickering [What Is React.JS?](https://www.youtube.com/watch?v=BO71b3l22mM)
-1. In class 
-   1. [Three.js installation](https://threejs.org/manual/#en/installation) 
-   
-
-
-
-## 4-2 
-
-1.  Create a reactive website
-
-
-
-## 5-1 Sound
-
-
-<div class="box-callout">
-
-#### HW3 - Create an interactive soundscape
-
-1. Follow the [Sound & Music tutorial](tutorials/sound-music) to learn Tone.js and Strudel.
-1. Continue learning Strudel on their [workshop](https://strudel.cc/workshop/first-sounds/)
-1. Explore the [device motion](https://strudel.cc/learn/devicemotion/) and [input devices](https://strudel.cc/learn/input-devices/)
-1. Design and code an interactive experience that makes use of studel. Consider using shapes, color, and other visuals in addition to sounds. It should have ...
-1. Post and "about" page on your Jamstack site with a screenshot, video, and 100-150 word statement about the concept and technology
-
-</div>
-
-
-	
-
-## 5-2 Music 
-
-- https://patatap.com/
-
-
-
-
-## 6-1 Three.js 
-
-
-
-
-
-
-<CustomAside type="homework" reference="(before class)">
-
-1. Read 📚 [0:Welcome](https://discoverthreejs.com/book/introduction/)
-1. 🎬 Heydon Pickering [What's The Deal With Large Language Models?](https://www.youtube.com/watch?v=rchEbQNMepw)
-1. Read 📚 Liz Stinson “[The Ever-Changing Art of the Screensaver.](https://eyeondesign.aiga.org/the-ever-changing-art-of-the-screensaver/)” in Eye on Design
-1. Explore [Generative Practices](https://criticalwebdesign.github.io/wiki/chapter-08/8-1-generative-practices/)
-
-</CustomAside>
-
-
-
-1. In class 
-	1. [Three.js installation](https://threejs.org/manual/#en/installation) 
-
-
-
-
-
-
-## 6-2 Three.js 
-
-1. Before class
-	1. 📚 Read [1:Getting Started](https://discoverthreejs.com/book/first-steps/)
-1. In class 
-	1. TBD tutorial
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 7-1
-
-Final project proposals
-
-
-
-## 7-2
-
-
-## Week 8 Final Project
-
-Final project 
-
-
-## Week 9
-
-Final project
-
-
-## Week 10
-
-Final project
-
-
-## Week 11
-
-Final project
-
-
-## Week 12
-
-Final project
-
-
-## Week 13
-
-Final project
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Change page layout" icon="document">
+		Delete `template: splash` in `src/content/docs/index.mdx` to display a
+		sidebar on this page.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid> */}

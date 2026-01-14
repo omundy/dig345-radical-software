@@ -25,27 +25,13 @@ export default defineConfig({
 				baseUrl: 'https://omundy.github.io/dig345-radical-software',
 			},
 			sidebar: [
-				{ label: 'Schedule', link: './' },
-				{ label: 'Syllabus', link: './syllabus' },
+				{ label: 'Syllabus', link: './' },
+				// { label: 'Syllabus', link: './syllabus' },
 				{ label: 'Assignments', link: './assignments' },
 
-				// {
-				// 	label: 'Schedule',
-				// 	items: [ // Each item here is one entry in the navigation menu.
-				// 		{ label: 'Course Overview', link: 'schedule' },
-				// 		{ label: 'Week 1 - Node.js, Jamstack', link: 'schedule#1-1-nodejs' },
-				// 		{ label: 'Week 2 - Express APIs', link: 'schedule#2-1-astrojs' },
-				// 		{ label: 'Week 3 - Databases', link: 'schedule#3-1-databases' },
-				// 		{ label: 'Week 4 - Reactivity', link: 'schedule#4-1-reactivity' },
-				// 		{ label: 'Week 5 - Sound & Music', link: 'schedule#5-1' },
-				// 		{ label: 'Week 6 - Three.js', link: 'schedule#6-1-threejs' },
-				// 		{ label: 'Week 7 - Final Proposals', link: 'schedule#7-1' },
-				// 		{ label: 'Week 8-15 - Final Project', link: 'schedule#8-1' },
-				// 	],
-				// },
-				// { label: 'Reference', autogenerate: { directory: 'reference' }, },
-				
-				{ label: 'Tutorials', autogenerate: { directory: 'tutorials' }, }, // autogenerate nav from files in folder
+				// autogenerate nav from files in folders
+				{ label: 'Schedule', autogenerate: { directory: 'schedule' }, },
+				{ label: 'Tutorials', autogenerate: { directory: 'tutorials' }, },
 			],
 			customCss: [
 				'./src/styles/custom.css', // relative path to custom CSS file
