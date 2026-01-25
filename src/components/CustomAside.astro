@@ -20,16 +20,18 @@ const titles: { [key: string]: any } = {
     tech: "",
     inclass: "In-class",
     info: "",
+    none: "",
 };
 import Icon from "@/components/Icon.astro";
 ---
 
 <div class="not-content callout-intro">
+    {( type != "none") &&
     <Icon {type} color="black" weight="600">
         <!-- inject html -->
         <Fragment set:html={titles[type]} />
     </Icon>
-
+}
     {reference && reference}
 
     <!-- NO REFERENCE = ONE LINE -->

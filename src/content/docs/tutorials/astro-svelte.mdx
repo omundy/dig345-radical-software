@@ -1,0 +1,100 @@
+---
+title: Astro + Svelte
+description: Create an Astro website with Svelte dynamic islands and publish it on Github. 
+draft: true
+---
+
+
+
+
+
+
+## Create an Astro site 
+
+
+
+## Astro Components
+
+
+
+
+
+## Astro Islands 
+
+
+https://docs.astro.build/en/concepts/islands/#client-islands
+
+
+## Astro + Svelte 
+
+
+
+
+Astro supports several types of [integrations](https://docs.astro.build/en/guides/integrations-guide/). Follow steps below to add a [svelte integration](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+
+
+
+
+1. The `astro add` command installs Svelte and updates your `astro.config.mjs` file to include the Svelte integration. 
+
+```
+npx astro add svelte
+```
+
+
+2. Create a Svelte Component
+
+`src/components/IdeaGenerator.svelte`
+
+
+3. Add the follow code 
+
+```svelte
+<script>
+  let count = 0;
+  function increment() {
+    count++;
+  }
+</script>
+
+<button on:click={increment}>
+  Count {count}
+</button>
+
+<style>
+  button {
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+</style>
+```
+
+4. Import the component 
+
+```js
+import Counter from '@/components/Counter.svelte';
+
+<Counter client:load />
+```
+
+You should see something like this: 
+
+import Counter from '@/components/examples/Counter.svelte';
+
+<Counter client:load />
+
+
+
+
+
+import RandomNumber from '@/components/examples/RandomNumber.svelte';
+
+<RandomNumber client:load />
+
+
+#### References 
+
+- [Using framework components](https://docs.astro.build/en/guides/framework-components/#using-framework-components)

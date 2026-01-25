@@ -42,7 +42,8 @@ export default defineConfig({
 				SiteTitle: './src/components/SiteTitle.astro',
 			},
 		}),
-	],
+		svelte() // add svelte integration
+	], 
 	vite: {
 		plugins: [
 			// @ts-ignore //-> tell the compiler to suppress all errors from the following line
