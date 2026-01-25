@@ -2,50 +2,50 @@
  * Config file for Astro/Starlight SSG
  */
 
-// @ts-check
+// @ts-check //-> enable static type checking by the TypeScript compiler
+
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-// import relativeLinks from 'astro-relative-links'
 import tailwindcss from '@tailwindcss/vite';
+import svelte from '@astrojs/svelte';
 
-
-// https://astro.build/config
+// Docs https://astro.build/config
 export default defineConfig({
+	// Github Pages configuration
 	site: 'https://omundy.github.io',
 	base: '/dig345-radical-software',
 	integrations: [
-		// relativeLinks(),
 		starlight({
 			title: 'DIG 345 Radical Software',
 			logo: {
-				src: './public/images/icon-radical-software.svg',
+				src: './public/images/simple-net-art-diagram/radical-software-icon.svg',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-radical-software' }],
 			editLink: {
 				baseUrl: 'https://omundy.github.io/dig345-radical-software',
 			},
 			sidebar: [
+				// add sidebar links directly 
 				{ label: 'Syllabus', link: './' },
-				// { label: 'Syllabus', link: './syllabus' },
 				{ label: 'Assignments', link: './assignments' },
 
-				// autogenerate nav from files in folders
+				// autogenerate sidebar links using folder/file names
 				{ label: 'Schedule', autogenerate: { directory: 'schedule' }, },
 				{ label: 'Tutorials', autogenerate: { directory: 'tutorials' }, },
 			],
 			customCss: [
 				'./src/styles/custom.css', // relative path to custom CSS file
-				'./src/styles/tailwind-overrides.css', // fixes to tailwind CSS 
+				'./src/styles/tailwind-overrides.css', // fixes for tailwind CSS 
 			],
 			components: {
-				// Override the default components
+				// override default Starlight components
 				SiteTitle: './src/components/SiteTitle.astro',
 			},
 		}),
 	],
 	vite: {
 		plugins: [
-			// @ts-ignore or as any
+			// @ts-ignore //-> tell the compiler to suppress all errors from the following line
 			tailwindcss()
 		]
 	},
