@@ -1,16 +1,6 @@
 <script>
-  // 1. Define the arrays
-  // first attempt - generate an idea, no time to make it good
-  // const prompt = ["make", "invent", "create", "code", "write"];
-  // const something = ["story", "app", "software", "tool", "mobile app", "api"];
-  // const adj = ["a useful", "a useless", "a speculative", "a pragmatic"];
-  // const verbPosSubject = ["increase", "create"];
-  // const posSubject = ["world peace", "mutual understanding", "empathy"];
-  // const verbNegSubject = ["solve", "fix"];
-  // const negSubject = ["a problem", "hunger", "homelessness"];
-
-  // using other generators instead
-  const sites = [
+  // 1. Define the array
+  let sites = [
     {
       name: "App Idea Generator",
       url: "https://appideagenerator.com",
@@ -48,23 +38,32 @@
     },
   ];
 
-  // 2. A function to pick a random item
-  const getRandomFromArr = (arr) => arr[Math.floor(Math.random() * arr.length)];
+  // 2. Shuffle array, create index to know when to shuffle again
+  shuffleArray(sites);
+  let i = 0;
 
-  // 3. A reactive state variable to store the phrase
+  // 3. Randomizing function
+  // https://stackoverflow.com/a/12646864/441878
+  // Randomize array in-place using Durstenfeld shuffle algorithm
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  // 4. A reactive state variable to store the phrase
   let phrase = "";
 
-  // 4. A function to update the selected items on user interaction
+  // 5. A function to update the selected items on user interaction
   function updateRandomPhrase() {
-    // first attempt - generate an idea, no time to make it good
-    // phrase = `${capitalizeFirstLetter(getRandomFromArr(prompt))} ${getRandomFromArr(adj)} ${getRandomFromArr(something)} to `;
-    // if (Math.random() > 0.05)
-    //   phrase += `${getRandomFromArr(verbNegSubject)} ${getRandomFromArr(negSubject)}`;
-    // else
-    //   phrase += `${getRandomFromArr(verbPosSubject)} ${getRandomFromArr(posSubject)}`;
-
-    const obj = getRandomFromArr(sites);
-    phrase = `<a href="${obj.url}" target="_blank">${obj.name}</a> ${obj.level}`;
+    // store str
+    phrase = `<a href="${sites[i].url}" target="_blank">${sites[i].name}</a> ${sites[i].level}`;
+    // reset i and shuffle array again (shuffling the array gives more random results, making it unlikely to see the same one twice in a row)
+    if (++i >= sites.length) {
+      shuffleArray(sites);
+      i = 0;
+    }
   }
 
   // 5. Add the first phrase as soon as the component has been mounted to the DOM (client side only)
@@ -74,12 +73,23 @@
   });
 </script>
 
-<button
-  on:click={updateRandomPhrase}
-  title="Generate"
-  class="inline-block align-middle"
-  ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17.65 6.35a7.95 7.95 0 0 0-6.48-2.31c-3.67.37-6.69 3.35-7.1 7.02C3.52 15.91 7.27 20 12 20a7.98 7.98 0 0 0 7.21-4.56c.32-.67-.16-1.44-.9-1.44c-.37 0-.72.2-.88.53a5.994 5.994 0 0 1-6.8 3.31c-2.22-.49-4.01-2.3-4.48-4.52A6.002 6.002 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78l-1.51 1.51c-.63.63-.19 1.71.7 1.71H19c.55 0 1-.45 1-1V6.41c0-.89-1.08-1.34-1.71-.71z"/></svg></button
-><span class="pl-2"> {@html phrase}</span>
+<div>
+  <button
+    on:click={updateRandomPhrase}
+    title="Generate"
+    class="inline-block align-middle"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="M17.65 6.35a7.95 7.95 0 0 0-6.48-2.31c-3.67.37-6.69 3.35-7.1 7.02C3.52 15.91 7.27 20 12 20a7.98 7.98 0 0 0 7.21-4.56c.32-.67-.16-1.44-.9-1.44c-.37 0-.72.2-.88.53a5.994 5.994 0 0 1-6.8 3.31c-2.22-.49-4.01-2.3-4.48-4.52A6.002 6.002 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78l-1.51 1.51c-.63.63-.19 1.71.7 1.71H19c.55 0 1-.45 1-1V6.41c0-.89-1.08-1.34-1.71-.71z"
+      /></svg
+    ></button
+  ><span class="pl-2"> {@html phrase}</span>
+</div>
 
 <style>
   button {

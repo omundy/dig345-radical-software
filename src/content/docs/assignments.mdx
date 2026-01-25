@@ -62,7 +62,7 @@ Git and Github are essential in this class. Post a link to your finished (parts 
 
 ## Javascript Proficiency
 
-<CustomAside type="info" oneline="true">A journal of your learning progress (technical and otherwise).</CustomAside>
+<CustomAside type="info" oneline="true">Complete exercises and lessons to further your knowledge of JS.</CustomAside>
 
 Javascript coding is essential in this class. Complete all Codecademy sections in the following lessons and post a screenshot showing your completion to Moodle. 
 
@@ -129,61 +129,211 @@ Look at computer art history for more examples....
 
 ## Final Project 
 
-Technology has always been complicated. It embodies the dreams as much as the failures of our species. It accelerates the possibility we might improve and ease the burdens of humankind, yet continues to allow us to cause harm and inequality. The tech that Facebook creates is considered innovative, not because it makes the world better, safer, or more humane, but due to its ability to capture attention, manipulate populations, and generate massive wealth for a few individuals. 
+<CustomAside type="info" oneline="true">Use tech and context(s) from the course to develop an app that breaks from software norms.</CustomAside>
 
-Recall however, technology is not only not neutral, it is also not yet self-deterministic. The messiness of technology mirrors our own possibilities and biases. The definition of "new" has equal subjectivity. The invention of the wheel, surely a big deal at its "launch party," allows humans unprecedented mobility as much as it accelerates us in our path to destroy the planet. 
 
-Using the technology and context(s) from this course, you will create a final project that is a departure from common functions of software.
+Technology has always been complicated. It embodies the dreams as much as the failures of our species. It accelerates the possibility we might improve and ease the burdens of humankind, yet continues to allow us to cause harm and inequality. The tech that Facebook creates is considered innovative, not because it makes the world better, safer, or more humane, but due to its ability to capture and sell attention, manipulate populations, and generate massive wealth for a few individuals. 
 
-{/* - Utility – One project will be useful, pragmatic, solve a problem, have utility, etc.
-- No Utility – The other will be useless, speculative, create a problem, have no utility, etc. */}
+Recall however, technology is not only not neutral, it is also not yet self-deterministic. The messiness of technology mirrors our own possibilities and biases. The definition of "new" has equal subjectivity. The invention of the wheel was surely a hit at its "launch party" for allowing humans unprecedented mobility. Yet, like many other innovations, it contributes towards accelerating our destruction of the natural world. 
 
 At the outcome, you will have developed your concept, incorporating knowledge from the course to research, ideate, prototype, test, build and deploy a "thing", and importantly, describe your motivations, inspiration, process through an accompanying statement and documentation.
 
-### Deliverables
-
-Link to or paste in Moodle (see schedule for dates):
-
-1. Brainstorm day - Come to class with ideas to discuss. Explore areas specific to your interests in https://criticalwebdesign.github.io/index/
-1. Pitch - Google Presentation 8-10 slides rubric
-	1. Description - Describe the project you will build in 2-3 sentences. How is it useful or not useful? Who will use this and why?
-	1. Competition scan: Research and list inspiration and similar works; identify potential methods and tutorials describing components of your overall project. Include links, authors, title, dates, etc. Examples (2–3) show similar works (in concept or tech) with images and links.
-	1. Other Planning / Graphics
-		1. An initial attempt at an [identity](https://docs.google.com/presentation/d/1exnY8fjVsOc3bKZFESJIM2s4JKxhqg_oASPDPokSfrE/edit?usp=sharing) (e.g. a logo, word mark, style guide, etc.).
-		1. Flowcharts (1–3) showing user interfaces (UI) and experiences (UX), or algorithms, data flow, or schemas as needed (e.g. data paths in the app)
-		1. [Wireframes](https://www.dreamhost.com/blog/how-to-wireframe-website/) showing essential interface views and layouts (e.g. an introduction page, web forms, results and outcomes)
-		1. Technology like [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) testing the main logic of your project. List tech and demos you may need including "unknowns" or aspects of your idea that you will learn to execute your project.
-	1. Milestones: List 3 milestones towards finishing this project. Explain what you will have done on each.
-1. Prototype – Create a working “proof of concept” of your app.
-	1. Your prototype should contain the essential functions of your project.
-	1. Your work should be live (able to be shared via a link in Slack)
-	1. Feel free to fork and use any example repository from class to get started.
-	1. Save and refresh your work in the browser often to see your changes. Commit changes regularly.
-1. Design – Design iterations of main views.
-	1. The design should reflect the overall concept and goals of your project.
-	1. Create your design iterations with [Figma](https://figma.com/), or use the Bootstrap template included in this repo designs/1.psd.
-	1. Create multiple iterations of each different page / view your app.
-	1. As per class presentations, look at relevant examples of good design to help you improve your own, then experiment and iterate!
-1. Deliverables & Documentation – Your finished project should include:
-	1. The Project
-		1. Intro page: A well-designed, but simple page that contextualizes your project. It could appear as an introduction to the project or provided at the end to explain what happened.
-		1. Your coded design (valid [HTML](https://validator.w3.org/) and [CSS](https://jigsaw.w3.org/css-validator/) (?)) combined with your prototype in a final application.
-		1. The project should be live, hosted on Github Pages, Vercel, or your own server.
-	1. Documentation
-		1. A presentation (update your original proposal with screenshots, text, flowcharts, etc.) to document and share your finished project.
-		1. A video (1:30 max) in case your site breaks 😳
-		1. A 200–300 word statement explaining your concept and execution. This can be posted in Moodle, or included somehow in the actual project (e.g. the Intro page).
-		1. See more about [documentation](https://omundy.github.io/learn-computing/slides/documentation.html)
-	1. Post links to all your deliverables (including your Figma designs) in Moodle.
 
 
+![design plan](../../assets/images/05-11-design-prototype-separation.png)
+
+
+
+import IdeaGenerator from '@/components/IdeaGenerator.svelte';
+
+
+### 1-Concept
+
+*Identify a topic, collect research, prepare a summary for a brainstorming session.*
+
+1. **Identify potential topics** to explore. It shouldn't be too specific, nor too broad. Is there a specific problem you want to solve? Or do you wish to address issues by [problematizing](https://en.wikipedia.org/wiki/Problematization) your subject?
+1. **Collect research** (related articles, etc.) **and examples** (2-3 links or summaries of similar projects). See the [Critical Web Design Index](https://criticalwebdesign.github.io/index) for inspiration.
+1. **Identify new skills or technologies** (e.g. a design method, programming pattern, code library, etc.) you are interested to learn and could potentially use in your project.
+1. **Write a summary** of your topic(s), research, and technology (3–4 sentences). Address why you are drawn to this topic and why it is important to explore. Identify the communities, resources, and issues involved. What [frameworks](./tutorials/resources) or methodologies might you use?
+1. Use an idea generator to spark a perspective you've never considered:  <IdeaGenerator client:load />
+1. Bring the above to class for the...
+
+<details>
+<summary>In-class activity</summary>
+
+In groups, brainstorm on your topic(s) use the <a href="https://omundy.github.io/project-development-template/materials/brainstorming-disney-method/index.html" target="_blank">Disney Creative Strategy</a>, which asks your group to assume different "hats" in order to ideate on concepts, solutions, and risks.
+
+1. Everyone: post your subject or concept in Slack
+1. As Dreamers, add new ideas for projects based on the subject to the posts in your group
+    - How might you create something that helps others discuss, think about, or help to solve the issue?
+    - The more ideas the better. Brainstorming aims to produce quantity, from which we select quality ideas.
+    - No criticism. Our goal is to generate a pool of ideas. All ideas are welcome.
+1. As Realists, after all have posted, talk about each in a group
+    - Think more practically, about how you would put the ideas into practice.
+1. After the session, explore the ideas and notes as a critic, to figure out what you can build in the given time
+
+</details>
 
 
 
 
-### Inspiration
 
-- https://github.com/aagentah/nw_wrld
+
+### 2 - Proposal
+
+Create a pitch deck (10-15 slide **Google Presentation**)* to share and plan your project that contains:
+
+1. A one paragraph introduction to your concept and what you plan to make. 
+1. Audience - Who will use this and why? Write a [user story](https://www.atlassian.com/agile/project-management/user-stories) describing their goals.
+1. An initial attempt at an [identity](https://docs.google.com/presentation/d/1exnY8fjVsOc3bKZFESJIM2s4JKxhqg_oASPDPokSfrE/edit?usp=sharing) (e.g. a logo, word mark, style guide, etc.).
+1. Competition Scan - Examples (2–3) of similar works (in concept or tech) with images and links.
+1. Flowcharts (2–3) showing each step users see, and another [showing how data works](https://www.google.com/search?q=a+flowchart+that+tracks+data+through+the+app&safe=off&tbm=isch) in the app
+1. [Wireframes](https://www.dreamhost.com/blog/how-to-wireframe-website/) showing all the views in the interface (introduction page, forms, results page)
+1. Technology - Include [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) of the main logic of your project. List technologies and demos you think you will need. List the "**unknowns**"—parts of your idea that you don't know yet how to execute.
+1. Does your project use data? What potential [sources](https://github.com/omundy/dig245-regenerative?tab=readme-ov-file#data-sources) will you use?
+
+{/* 1. Milestones: List 3 milestones towards finishing this project. Explain what you will have done on each. */}
+
+<details>
+<summary>In-class activity (lightening talks)</summary>
+
+##### <a href="https://en.wikipedia.org/wiki/Lightning_talk">Lightning talks</a> of your pitches
+1. Share a link to your proposal in Slack.
+1. Present slides on Zoom. 3 minutes max.
+1. 1 minute max for questions / comments. Add others in Slack thread.
+
+</details>
+
+<details>
+<summary>In-class activity (speed dating)</summary>
+
+##### Speed Dating
+
+1. Find a partner.
+1. Share your proposal, progress, and unknowns. (3 min)
+1. Your partner should ask questions and make comments while you make notes. (1 min)
+1. Switch roles and repeat the above.
+1. Switch partners and repeat.
+
+</details>
+
+
+
+
+
+
+
+
+
+
+### 3 - Prototype
+
+Create a working “proof of concept” of your app.
+
+1. Your prototype should contain the essential functions of your project.
+1. Your work should be live (able to be shared via a link in Slack)
+1. Feel free to fork and use any example repository from class to get started.
+1. [Save and refresh](https://github.com/omundy/learn-computing/blob/main/topics-keyboard-shortcuts.md#web-development-edit-save-refresh-loop) your work in the browser often to see your changes. Commit changes regularly.
+
+<details>
+<summary>In-class activity</summary>
+
+In groups, share your prototypes to get feedback:
+
+- Be ready to explain the current status of your work.
+- Bring specific questions or unknowns (concept, design, tech) you would like to discuss with your group.
+
+</details>
+
+
+
+
+
+	
+
+
+
+
+
+
+### 4 - Design
+
+Design iterations of main views.
+
+1. The design should reflect the overall concept and goals of your project.
+1. Create your design iterations with [Figma](https://figma.com), or use a Bootstrap or Tailwind template. **Show your work!** Do not delete previous versions—we want to see your progress as you iterate and improve your designs.
+1. Include a [Moodboard](https://www.google.com/search?q=web+design+moodboard) showing your research into how others have designed solutions to similar information and design problems
+1. Create multiple iterations of each different page / view your app.
+1. Look at relevant examples of good design to help you improve your own, then experiment and iterate! See DIG 245 [presentations](https://docs.google.com/presentation/d/1BiIHVEQjmIb2k2vB6N3x1g_S3KSLyZq2YCniq1ONjg8/edit?usp=sharing) for more. 
+1. **Do not use AI-generated logos, icons, images, etc.** An important part of a design practice includes creating the ideas for these things and producing them yourself. At the very least, consider using royalty free images created by actual humans from [thenounproject.com](https://thenounproject.com/) or  [unsplash.com](https://unsplash.com/) instead of using whatever AI barfs up.
+
+
+<details>
+<summary>In-class activity</summary>
+
+Share your iterations to get feedback before coding the final design.
+
+- Bring to class: What are three questions you would like to ask each user of your potential design?
+- In-class: [Design Critique: Imaginary Audience](https://docs.google.com/presentation/d/1BiIHVEQjmIb2k2vB6N3x1g_S3KSLyZq2YCniq1ONjg8/edit#slide=id.gf16dac508b_0_0)
+
+</details>
+
+
+
+
+
+
+
+### 5 - Design + Prototype
+
+
+1. Combine your coded design and prototype
+1. Your project should be 95% complete
+
+
+<details>
+<summary>In-class activity</summary>
+
+1. Make sure your project is live and ready to share. Post a link to it and Figma in Slack.
+1. Share your project in a small group (watch other use it, get specific feedback)
+1. Then, we'll go around the room and those who wish can share with the whole class in a <a href="https://en.wikipedia.org/wiki/Lightning_talk">lightning talks</a> (3 min.) format.
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+### 6 - Deliverables
+
+Your finished project should include:
+
+1. **The Project**
+	1. Your coded design (valid [HTML](https://validator.w3.org/) and [CSS](https://jigsaw.w3.org/css-validator/) <sup>([?](https://github.com/omundy/dig245-critical-web-design/blob/main/topics/html-css/css.md#css-validation))</sup>) combined with your prototype in a final application.
+	1. About page: A well-designed, but simple page that contextualizes your project. It could appear as an introduction to the project or provided at the end to explain what happened.
+	1. The project should be live, hosted on Github Pages, Davidson Domains, or [some other server](https://github.com/omundy/learn-javascript/blob/main/topics/servers/servers.md).
+1. **Documentation**
+	1. A Google Presentation (update your original proposal with screenshots, text, flowcharts, etc.) to document and share your finished project.
+	1. A screencast video taken on your computer (do not use a cell phone!) (1:30 max) to demonstrate how your project works (see [tips](https://omundy.github.io/learn-computing/slides/documentation.html))
+	1. A 200–300 word statement explaining your concept and execution. This can be posted in Moodle, or included somehow in the actual project (e.g. the Intro page).
+	1. A link to (all of) your Figma layouts
+1. **Moodle Post**
+	1. When finished, push, publish, and post all deliverables to Moodle per documentation in the Assignments.
+
+
+
+
+
+
+
+
+
 
 
 
