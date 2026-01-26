@@ -216,7 +216,7 @@ pnpm-debug.log*
 1. Clone the new repo to your computer. (i.e. Green button > **Open in Github Desktop**)
 1. Open the project in VS Code. 
 1. In the terminal, install dependencies using `npm install`
-1. Run the development server and find your new site at: http://localhost:4321
+1. Run the development server with `npm run dev` and find your new site at: http://localhost:4321
 
 
 
@@ -248,12 +248,14 @@ import { FileTree } from '@astrojs/starlight/components';
 - `/src/assets/`- Place images here then embed them in Markdown with a relative link.
 - `public/` - This directory is for static assets, like favicons.
 - `astro.config.mjs` - The Astro config file
-- `package.json` - This file contains your project dependencies as well as a list of commands (below) for installing dependencies, starting, building, and testing Astro. 
+- `package.json` - This file contains your project dependencies as well as a list of commands for installing dependencies, starting, building, and testing Astro. 
+
+{/* 
   - `npm install` - Installs dependencies                         
   - `npm run dev` - Starts local dev server at `localhost:4321`     
   - `npm run build` - Build your production site to `./dist/`         
   - `npm run preview` - Preview your build locally, before deploying 
-
+ */}
 
 
 
