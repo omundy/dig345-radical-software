@@ -4,7 +4,7 @@ description: Create an Astro Starlight documentation website and publish it on G
 # draft: true
 ---
 
-{/* Create a jamstack website using Node, Astro/Starlight */}
+{/* Create a jamstack website using Node, Astro Starlight */}
 
 import CustomAside from '@/components/CustomAside.astro';
 
@@ -49,7 +49,7 @@ https://github.com/omundy/learn-javascript/blob/main/topics/jamstack/jamstack.md
 
 
 
-### Example Astro/Starlight websites
+### Example Astro Starlight websites
 
 - The Starlight documentation website https://starlight.astro.build/
 - The Starlight site showcase https://starlight.astro.build/resources/showcase/
@@ -89,13 +89,14 @@ import YoutubeVideo from '@/components/YoutubeVideo.astro';
 
 
 
-
-
-
-
-{/* <details>
+<details>
 <summary>Instructions for creating a Starlight site from scratch</summary>
-</details> */}
+
+
+:::caution
+These instructions show how to create a Starlight site from scratch. DIG 345 students are advised to use a fork of the DevLog instead.
+:::
+
 
 ### Create an Astro Starlight site
 
@@ -116,51 +117,10 @@ npm run dev
 ```
 
 
-
-
-
-
-### Project structure
-
-Inside your intial Astro + Starlight project, you'll see the following folders and files:
-
-
-import { FileTree } from '@astrojs/starlight/components';
-
-<figure>
-<FileTree>
-
-- public/ Static files 
-- src/ All files in here will be processed by Astro
-  - assets/ Static files processed by Astro 
-  - content/ In a regular Astro site these become routes
-    - docs/
-      - contents/ Folders/Files here become sections/pages in your site
-    - index.mdx Site home page
-- astro.config.mjs Astro/Starlight config file
-- package.json Meta information and project dependencies
-
-</FileTree>
-</figure>
-
-- Starlight publishes `.md` and `.mdx` files in `/src/content/docs/` to the web using directory/filename (e.g. `guides/example`)
-- `/src/assets/`- Place images here then embed them in Markdown with a relative link.
-- `public/` - This directory is for static assets, like favicons.
-- `astro.config.mjs` - The Astro config file
-- `package.json` - This file contains your project dependencies as well as a list of commands for testing and building Astro. 
-
-{/* 
-- `npm install` - Installs dependencies                         
-- `npm run dev` - Starts local dev server at `localhost:4321`     
-- `npm run build` - Build your production site to `./dist/`         
-- `npm run preview` - Preview your build locally, before deploying 
-*/}
-
-
 ### Update project structure
 
 1. Make a new folder called `schedule` in `/src/content/docs/`
-1. Add a new file called `devlog-1-2.mdx` inside `/src/content/docs/schedule/`
+1. Add a new file called `devlog-1-3.mdx` inside `/src/content/docs/schedule/`
 1. To the top add a "frontmatter" section:
 
 ```
@@ -170,8 +130,16 @@ description: DevLog page
 ---
 ```
 
-4. Below the frontmatter in `devlog-1-2.mdx` add this outline:
+4. Below the frontmatter in `devlog-1-3.mdx` add this outline:
 ```
+## Outcomes 
+
+1. Paste the code from the list ...
+1. ... of outcomes from the course schedule ...
+1. ... and update content where noted.
+
+
+
 ## Context
 
 What ideas resonated with you?
@@ -182,6 +150,8 @@ What ideas resonated with you?
 - Comment:
 - Question:
 
+
+
 ## Tech
 
 What tech did you learn?
@@ -191,7 +161,6 @@ What tech did you learn?
 - Link(s) to outcomes: 
 - Comments: 
 - Questions: 
-
 ```
 5. In VS Code, open `astro.config.mjs`
 1. Set `title` to `DevLog`
@@ -237,16 +206,60 @@ pnpm-debug.log*
 .DS_Store
 ```
 
-
-
-{/* https://github.com/omundy/dig345-devlog */}
-
+</details>
 
 
 
+### Fork an Astro Starlight site
+
+1. Fork this repo into your own account https://github.com/omundy/dig345-devlog
+1. Clone the new repo to your computer. (i.e. Green button > **Open in Github Desktop**)
+1. Open the project in VS Code. 
+1. In the terminal, install dependencies using `npm install`
+1. Run the development server and find your new site at: http://localhost:4321
 
 
-### Publish Astro/Starlight using Github Actions
+
+### Review Project structure
+
+Inside your intial Astro + Starlight project, you'll see the following folders and files:
+
+
+import { FileTree } from '@astrojs/starlight/components';
+
+<figure>
+<FileTree>
+
+- .gitignore
+- public/ Static files 
+- src/ All files in here will be processed by Astro
+  - assets/ Static files processed by Astro 
+  - content/ In a regular Astro site these become routes
+    - docs/
+      - contents/ Folders/Files here become sections/pages in your site
+    - index.mdx Site home page
+- astro.config.mjs Astro Starlight config file
+- package.json Meta information and project dependencies
+
+</FileTree>
+</figure>
+
+- Starlight publishes `.md` and `.mdx` files in `/src/content/docs/` to the web using directory/filename (e.g. `guides/example`)
+- `/src/assets/`- Place images here then embed them in Markdown with a relative link.
+- `public/` - This directory is for static assets, like favicons.
+- `astro.config.mjs` - The Astro config file
+- `package.json` - This file contains your project dependencies as well as a list of commands (below) for installing dependencies, starting, building, and testing Astro. 
+  - `npm install` - Installs dependencies                         
+  - `npm run dev` - Starts local dev server at `localhost:4321`     
+  - `npm run build` - Build your production site to `./dist/`         
+  - `npm run preview` - Preview your build locally, before deploying 
+
+
+
+
+
+
+### Publish Astro Starlight using Github Actions
 
 1. In Github Desktop, commit your work and push it to a new repository on Github. Leave it public.
 1. Open the repo web page **Github Desktop > Repository > View on Github**. Click Settings > Pages. Choose **GitHub Actions** as the Source of your site.
@@ -268,13 +281,13 @@ export default defineConfig({
 	],
 })
 ```
-4. In VS Code, right click the empty area in your Explorer below the project files and choose New File... Paste the following path to auto-create the folders and directories for the deploy file: `.github/workflows/deploy.yml` (and can also make these individually). Don't forget the perio in front of "github".
-1. Paste the YAML code from https://docs.astro.build/en/guides/deploy/github/ into `deploy.yml` 
-1. Go to your published site at https://omundy.github.io/dig345-devlog
+4. Create (or edit) a [deploy file](https://docs.astro.build/en/guides/deploy/github/): `.github/workflows/deploy.yml`. Note the period in front of `.github`.
+1. Paste the YAML code from [this page](https://github.com/withastro/action?tab=readme-ov-file#build-and-deploy-to-github-pages) into `deploy.yml` 
+1. Go to your published site at https://`USERNAME`.github.io/dig345-devlog to verify the site is live.
 
 
 :::caution
-If you don't see your site here check https://github.com/USERNAME/REPO/actions for issues. Ensure GitHub Pages has been enabled!
+If you don't see your site, check https://github.com/USERNAME/REPO/actions for issues. Ensure GitHub Pages has been enabled!
 :::
 
 
@@ -289,13 +302,28 @@ From Astro [documentation](https://starlight.astro.build/guides/css-and-tailwind
 
 1. Add a folder called `styles` to your `/src/` directory. 
 1. Add a file called `custom.css` to `/src/styles/` directory. 
-1. Paste in the following code. This will set a wider default column width and larger text size for page titles:
+1. Paste in the following code. This will set a wider default column width and improve page titles:
 
-```
+```css
+/* set a wider default column width */
 :root {
   --sl-content-width: 50rem;
 }
+
+/* improve headings */
+main h1 { font-size: 2rem;}
+main h2 { font-size: 1.8rem;}
+main h3 { font-size: 1.6rem;}
+main h4 { font-size: 1.4rem;}
+main h5 { font-size: 1.2rem;}
+main h6 { font-size: 1rem;}
 ```
+{/* ADDED BELOW...
+.sl-markdown-content .inline-icon {
+  display: inline;
+}  
+*/}
+
 
 4. Add the path to your CSS file to Starlight’s `customCss` array in `astro.config.mjs`:
 
@@ -345,7 +373,7 @@ import { Icon } from '@astrojs/starlight/components';
 
 2. Add this rule to `custom.css`
 
-```
+```css
 .sl-markdown-content .inline-icon {
   display: inline;
 }
@@ -363,10 +391,10 @@ import { Icon } from '@astrojs/starlight/components';
 
 
 :::caution
-If you change the dependencies in your `package.json` file you will need to 
+If you change the dependencies in your `package.json` file by hand you will need to 
 1. Delete the `package-lock.json`
 1. Delete the `node_modules/`
-1. Run `npm install` to regenerate the above.
+1. Run `npm install` to regenerate `package-lock.json` and `node_modules/`.
 :::
 
 
