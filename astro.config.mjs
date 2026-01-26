@@ -1,5 +1,5 @@
 /**
- * Config file for Astro/Starlight SSG
+ * Config file for Astro Starlight SSG
  */
 
 // @ts-check //-> enable static type checking by the TypeScript compiler

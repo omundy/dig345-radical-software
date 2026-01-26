@@ -1,5 +1,5 @@
 ---
-title: Week 2 - Astro.js / Svelte
+title: Week 2 - Astro.js / Tailwind
 description: DIG 345 course schedule
 # draft: true
 ---
@@ -70,19 +70,13 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 
 <CustomAside type="homework" reference="(before class)">
 
-- ✅ Complete DevLog 2-1 (Astro / Starlight) and post link on Moodle.
-- Read 📚 Modules 9.2 and 9.3 in Chapter 9 of *Critical Web Design*.
+- ✅ Complete DevLog 2-1 and post link on Moodle.
+{/* - Read 📚 xxxx */}
 
 </CustomAside>
 
-<figure>
-<div class="max-w-3xl mx-auto not-content">
-  <YoutubeVideo src="https://www.youtube.com/watch?v=YNVjL-3SMIc" />
-</div>
-</figure>
-
 <CustomAside type="inclass">
-1. Instructor: Introduce Express and show examples 
+1. Instructor: Introduce Astro.js Build a Blog Tutorial and show examples 
 1. Class: Start DevLog 2-3, continue in-class/at home. 
 </CustomAside>
 
@@ -96,18 +90,16 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 
 
 
-## 2-3 Node/Express/Vercel
+## 2-3 Astro.js + Tailwind
 
 <CustomAside type="homework">
 
-- ✅ Complete steps 1-5 from DevLog 2-3 (Node/Express)
-- ✅ Complete the [Git Milestones](https://github.com/omundy/learn-git-milestones) and post the link on Moodle.
-- Review 📚 this longer description of front end / back end at the [Odin Project](https://www.theodinproject.com/lessons/nodejs-introduction-to-the-back-end)
+- ✅ Complete steps 1-5 from DevLog 2-3
 
 </CustomAside>
 
 <CustomAside type="inclass">
-1. Instructor: Introduce Vercel dashboard and examples 
+1. Instructor: Introduce Tailwind and examples 
 1. Class: Complete DevLog in-class/at home. 
 </CustomAside>
 
@@ -116,59 +108,31 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 
 ### DevLog 2-3 
 
-#### Create a full stack application using Node and Express
 
-Create a full stack application following the [Bad Password API Node/Express](https://criticalwebdesign.github.io/wiki/chapter-09/9-4-bad-password-api/) tutorial. Copy/paste and complete the following objectives into `devlog-2-3.mdx` in your DevLog.  
+import { Icon } from '@astrojs/starlight/components';
 
-1. Fork an existing Github project ([criticalwebdesign/bad-password-api-starter](https://github.com/criticalwebdesign/bad-password-api-starter)) (CWD 9.3)
-1. Connect to a remote API and use JSON data in a frontend (CWD 9.3)
-1. Modify the project structure, install dependencies, and run the project. (CWD 9.4) 
-1. Add a static API route using Express.  (CWD 9.4) 
-1. Add dynamic API routes to Express. (CWD 9.4) 
-1. Create a free Vercel account  (CWD 9.4) 
-1. Deploy your project on Vercel. (CWD 9.4) 
-1. Read 📚 [Hacktivist deletes white supremacist websites live onstage during hacker conference](https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/), TechCrunch 2026 Post a reading response in your DevLog per information in the [Assignments](./#assignments).
-1. Write a reflection explaining what you learned in your DevLog. Link to sources.
-1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
+#### Create an Astro blog site 
+
+Follow [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to create a modular website using component-based design. Copy and paste these instructions into `devlog-2-3` in your DevLog. Then publish it and turn it in by posting the direct link to this DevLog on Moodle.
+
+
+1. Create a new Astro site and publish it on Netlify [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/1-setup/). Add the formatted (backticks) command ✏️ here 
+1. Create pages (`.astro` files) and blog posts (`.md` files) using frontmatter and file-based routing [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/2-pages/). 
+1. Use Astro [components](https://docs.astro.build/en/basics/astro-components/) (also `.astro` files!) to reuse common code across your website [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/3-components/). 
+1. Create reusable layout components using `<slot />` and `Astro.props` to inject child content [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/4-layouts/). 
+1. Create layout components for markdown files
+1. Display a dynamically generated list of posts on your Blog page [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/5-astro-api/). 
+1. Use Dynamic page routing with [`getStaticPaths()`](https://docs.astro.build/en/tutorial/5-astro-api/2/) to specify and store static routes during build, and pass each page its own props.
+1. Install an Astro Preact integration. Add a components in their own language. Use a client: directive for hydration on my UI framework component. https://docs.astro.build/en/tutorial/6-islands/1/
+1. Compare your finished blog site to the [tutorial example](https://github.com/withastro/blog-tutorial-demo/tree/complete) (I used Svelte, but it is nearly the same effect)
+1. Modify your site design and content as if you were transitioning to Astro.js from an existing Wordpress site/blog. Meaning, move content into your site.
+
+
 
 </div>
 
 
 
-<figure>
-<div class="max-w-3xl mx-auto not-content">
-  <YoutubeVideo src="https://www.youtube.com/watch?v=2_bA8Ckz99s" />
-</div>
-[Hacktivist deletes white supremacist websites live onstage during hacker conference](https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/)
 
-</figure>
-
-
-
-{/* 
-
-
-A bit outdated
-https://omundy.github.io/learn-javascript/topics/node-express/slides.html
-
-Full-Stack Web App Workshop - Davidson Hacks 2024
-https://docs.google.com/document/d/1caPqg3nRV4VFWZVMy-ujeGHbPA11CmUReCon8_d8MVQ/edit?tab=t.0
-
-- Template (part 1)
-	- Finished repo https://github.com/omundy/sample-node-express-template
-	- Live project https://sample-node-express-template.herokuapp.com/
-- Username Generator (part 2 & 3)
-	- Finished repo https://github.com/omundy/sample-node-express-username-generator
-	- Live project https://sample-node-express-username.herokuapp.com/
-
-- https://github.com/omundy/sample-node-express-username-generator
-- https://github.com/omundy/sample-node-express-site
-- https://github.com/omundy/sample-node-osm-leaflet
-
- */}
-
-{/* 
-<div class="box-callout border-green"></div>
- */}
 
 

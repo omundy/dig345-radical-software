@@ -5,16 +5,165 @@ draft: true
 ---
 
 
+Follow [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to create a modular website using component-based design.
+
+
+
+## GH
+
+:::note 
+Section 1 "[Deploy your site to the web](https://docs.astro.build/en/tutorial/1-setup/5/)" shows instructions for Netlify. You are welcome to do this, but the end of these instructions I will show you how to publish it on Github Pages.
+::: 
+
+
+1. Correctly [define config properties](/dig345-radical-software/tutorials/astro-svelte/#define-config-properties-for-github-pages) for publishing and [update base URLs](/dig345-radical-software/tutorials/astro-svelte/#update-base-urls-for-github-pages). ✏️ Add the full URL to your site 
+1. Deploy your Astro site using Github Pages (follow [How to deploy](https://docs.astro.build/en/guides/deploy/github/) but use [the action on this page](https://github.com/withastro/action)).
 
 
 
 
-## Create an Astro site 
+## Define config properties for Github Pages 
+
+The below [configuration](https://astro.build/config) example fixes your `base` and `site` properties to publish on Github.
+
+1. Open `astro.config.mjs`
+1. In `defineConfig({})`, change `site` to `https://` + your username + `.github.io`. 
+1. Change `base` to `/` + your repository name.
+1. Add `output: 'static',`.
+1. Compare your file to the one below published at https://omundy.github.io/tarheeltrailblazers-astro 
+
+```js 
+// @ts-check
+import { defineConfig } from 'astro/config';
+import svelte from "@astrojs/svelte";
+
+export default defineConfig({
+	site: 'https://omundy.github.io', // DOMAIN
+	base: '/tarheeltrailblazers-astro', // REPOSITORY
+	output: 'static',
+	integrations: [svelte()]
+});
+```
+
+
+
+
+
+## Update base urls for Github Pages 
+
+99% of websites at Github Pages are published inside folders in a subdomain. For example, the domain for the site you are view ing is `https://omundy.github.io` while the folder is `/dig345-radical-software`. Unless you are publish directly to a domain (the repo name is your username, e.g. `omundy.github.io`), you need to change the internal links in your site so it can be published at Github Pages. 
+
+1. Open the following files and add `const base = import.meta.env.BASE_URL;` to end of the frontmatter in each file. 
+
+```
+src/components/BlogPost.astro
+src/components/Navigation.astro
+src/layouts/MarkdownPostLayout.astro
+src/pages/tags/index.astro
+```
+
+2. In `src/components/BlogPost.astro` change the link in the body:
+
+```html
+<a href={`${base}${url}`}>{title}</a>
+```
+
+3. In `src/components/Navigation.astro` change the links in the body:
+
+```html 
+<div id="main-menu" class="nav-links">
+    <a href={`${base}/`}>Home</a>
+    <a href={`${base}/about`}>About</a>
+    <a href={`${base}/blog`}>Blog</a>
+    <a href={`${base}/tags`}>Tags</a>
+</div>
+```
+
+4. In `src/layouts/MarkdownPostLayout.astro` change the tag link in the body:
+
+```html
+<a href={`${base}/tags/${tag}`}>{tag}</a>
+```
+
+5. In `src/pages/tags/index.astro` change the tag link in the body:
+
+```html
+<a href={`${base}/tags/${tag}`}>{tag}</a>
+```
+
+
+
+
+
+
+
+
+
+
+## Create and start an Astro project
+
+1. Make a folder called `tarheeltrailblazers-astro` 
+1. Open the folder in VS Code 
+1. In the VS Code terminal, run `npm create astro@latest` and follow the wizard:
+    1. Where should we create your new project? -> Type `./`
+    1. How would you like to start your new project? -> Use minimal (empty) template
+    1. Install dependencies? -> Yes
+    1. Initialize a new git repository? -> Yes
+1. Run `npm run dev` to start the dev server and open the localhost URL it shows to see your site (Astro uses http://localhost:4321 by default if port `4321` is available)
+
+
+
+
+
+## Astro files 
+
+
+- JS in the frontmatter are executed at build time to create static HTML for your site, and then the code is “thrown away.”
+- JS in a `<script>` tag only runs in the browser.
+
+
+```js 
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const pageTitle = "Home";
+---
+
+<html lang="en">
+	<head>
+        <title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+
+		<h1>{pageTitle}</h1>
+
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+            console.log("hello from the DevTools console!");
+		</script>
+	</body>
+</html>
+```
+
+
+
+
+
 
 
 
 ## Astro Components
 
+
+
+## Astro routing 
+
+A function to generate multiple, prerendered page routes from a single .astro page component with one or more parameters in its file path. Use this for routes that will be created at build time, also known as static site building.
+https://docs.astro.build/en/reference/routing-reference/#getstaticpaths
 
 
 
