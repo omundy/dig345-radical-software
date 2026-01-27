@@ -174,9 +174,23 @@ https://docs.astro.build/en/reference/routing-reference/#getstaticpaths
 https://docs.astro.build/en/concepts/islands/#client-islands
 
 
+:::note[Astro + Dynamic Data]
+
+You can include dynamic data from any source in the Astro build. For example:
+
+- Import and convert TXT, CSV, or JSON data to static routes.
+- Fetch data from a remote API for your routes. See this [example](https://github.com/incluud/accessible-astro-starter/blob/main/src/pages/blog/%5B...page%5D.astro)
+- Use a local database for data in your static site. See "[Convert a PHP/MySQL site to Jamstack and host on Github Pages](https://owenmundy.com/blog/2025/11/convert-a-php-mysql-site-to-jamstack-and-host-on-github-pages/)" (2024) where I describe rebuilding [camplajolla.org](https://omundy.github.io/camplajolla/) using Astro and MySQL.
+
+Even if most of your site is static, you can use dynamic data and reactive frameworks (i.e. React, Svelte, etc.) with [Astro Islands](https://docs.astro.build/en/concepts/islands/#island-components).
+
+:::
+
+
+
+
+
 ## Astro + Svelte 
-
-
 
 
 Astro supports several types of [integrations](https://docs.astro.build/en/guides/integrations-guide/). Follow steps below to add a [svelte integration](https://docs.astro.build/en/guides/integrations-guide/svelte/)
@@ -247,3 +261,138 @@ import RandomNumber from '@/components/examples/RandomNumber.svelte';
 #### References 
 
 - [Using framework components](https://docs.astro.build/en/guides/framework-components/#using-framework-components)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Astro Resources 
+
+- Astro documentation https://docs.astro.build/
+
+
+
+
+### Astro Themes 
+
+- [astro.build/themes](https://astro.build/themes/) - Big list, sortable by [free](https://astro.build/themes/1/?search=&price%5B%5D=free), etc.
+- [Tailwind themes](https://www.builtatlightspeed.com/category/tailwind?themes%5BrefinementList%5D%5Bcategories.ssg%5D%5B0%5D=astro&themes%5BrefinementList%5D%5Bcategories.archetype%5D%5B0%5D=blog&themes%5BrefinementList%5D%5Bdistribution%5D%5B0%5D=open-source) that use Astro
+- Also see [Astro Showcase](https://astro.build/showcase/) and [astro.new](https://astro.new/latest/) with frameworks, integrations, templates, etc. 
+
+
+Theme | Tailwind | Blog | Markdown | Simplicity | Themes | 🌟 | Experience
+--- | --- | --- | --- | --- | --- | --- | ---
+[AstroWind](https://github.com/arthelokyo/astrowind) ([demo](https://astrowind.vercel.app/)) | ✅ | ✅ | ✅ | ⚠️ | ❌ | 5.4k | ⚠️
+[Accessible Astro Starter](https://github.com/markteekman/accessible-astro-starter) ([demo](https://starter.incluud.dev/)) | ✅ | ✅ | ✅ | ✅ | ❌ | 1.1k | [camplajolla.org](https://omundy.github.io/camplajolla/)
+[Titan Core](https://github.com/rspisarski/titan-core) ([demo](https://titan-core.netlify.app/)) | ✅ | ✅ | ✅ | ⚠️ | ✅ | 74 | ⚠️
+[Bloomfolio](https://github.com/lauroguedes/bloomfolio) ([demo](https://github.com/lauroguedes/bloomfolio)) | ✅ | ✅ | ✅ | ✅ | ✅ | 61 | n/a 
+[Saral Theme](https://github.com/yashjawale/saral-theme-astro) ([demo](https://yashjawale.in/saral-theme-astro/blog/)) | ✅ | ✅ | ✅ | ✅ | ❌ | 53 | n/a
+[Astro-Bootstrap](https://github.com/astro-bootstrap/astro-bootstrap) ([demo](https://astro-bootstrap.github.io/)) | ❌ | ✅ | ✅ | ✅ | ❌ | 40 | n/a
+[Astro Base](https://github.com/jonnysmillie/astro-base) ([demo](https://astro-base.netlify.app/)) | ✅ | ⚠️ | ✅ | ✅ | ❌ | 13 | ⚠️
+
+
+
+
+
+### Content Management Systems (CMS)
+
+Allow non-technical editors to manage content on your Astro site. Some notable CMSs from the [large list of possible integrations](https://docs.astro.build/en/guides/cms/).
+
+- https://www.sanity.io/plugins/sanity-astro
+- https://frontmatter.codes/
+
+
+
+
+
+
+
+### Astro Technical Notes 
+
+
+### Typescript
+
+- [Add `// @ts-nocheck` to the top of the `<script>` tag](https://stackoverflow.com/a/77722897/441878) (the client side script) to silence all the Typescript errors in your `.astro` files. It saves from adding `// @ts-ignore` to each line.
+
+
+
+
+### Upgrade Astro 
+
+```bash
+# Upgrade Astro and official integrations together
+npx @astrojs/upgrade
+```
+
+
+
+
+
+
+
+### Add Tailwind to Astro
+
+See [Install Tailwind CSS with Astro](https://tailwindcss.com/docs/installation/framework-guides/astro)
+
+:::caution
+Note that Tailwind uses [Preflight](https://tailwindcss.com/docs/preflight) that removes all base styles, including things you might expect to not be removed like [lists](https://tailwindcss.com/docs/preflight#lists-are-unstyled)
+:::
+
+
+
+
+
+
+
+
+
+### Configure @ Aliases
+
+[Aliases](https://docs.astro.build/en/guides/imports/#aliases) can help improve the development experience in codebases with many directories or relative imports.
+
+1. Open `tsconfig.json` located at the root of your project. Astro projects include a `tsconfig.json` file by default.
+1. Add `baseUrl` and `paths` to the `compilerOptions` object. The `baseUrl` should be set to `.` (the project root), and the `paths` define your aliases. A common setup uses `@/` to point to the `/src/` directory.
+1. Restart your development server to ensure the changes are picked up. 
+
+
+```ts
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+
+The above changes this 
+
+```mdx
+---
+import Button from '../../components/controls/Button.astro';
+---
+```
+
+To this: 
+```mdx
+---
+import Button from '@/components/controls/Button.astro';
+---
+```

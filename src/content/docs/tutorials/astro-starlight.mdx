@@ -39,11 +39,7 @@ https://github.com/omundy/learn-javascript/blob/main/topics/jamstack/jamstack.md
 
 :::note[Use [Astro.js](https://docs.astro.build/en/install-and-setup/) on its own!]
 
-- Astro is popular and flexible as you can see in their [showcase](https://astro.build/showcase/).
-- Even if most of your site is static, you can use dynamic data and reactive frameworks (i.e. React, Svelte, etc.) with [Astro Islands](https://docs.astro.build/en/concepts/islands/#island-components).
-- You can convert TXT, CSV, or JSON data, or even a local database to a static site. See "[Convert a PHP/MySQL site to Jamstack and host on Github Pages](https://owenmundy.com/blog/2025/11/convert-a-php-mysql-site-to-jamstack-and-host-on-github-pages/)" (2024) where I describe rebuilding [camplajolla.org](https://omundy.github.io/camplajolla/) using Astro and MySQL.
-- There are many themes available: [accessible-astro](https://github.com/incluud/accessible-astro-starter), [astro-bootstrap](https://astro-bootstrap.github.io/), [bloomfolio](https://github.com/lauroguedes/bloomfolio), [saral](https://yashjawale.in/saral-theme-astro/blog/)
-- Explore Astro on its own through their [docs](https://docs.astro.build/en/install-and-setup/) or this tutorial [What Is Astro? An Introduction to the Popular Static Site Generator](https://kinsta.com/blog/astro-js/).
+Astro is popular and flexible as you can see in their [showcase](https://astro.build/showcase/). Explore Astro on its own through their [docs](https://docs.astro.build/en/install-and-setup/) or this tutorial [What Is Astro? An Introduction to the Popular Static Site Generator](https://kinsta.com/blog/astro-js/).
 
 :::
 
@@ -428,7 +424,7 @@ If you change the dependencies in your `package.json` file by hand you will need
 
 
 
-## More Topics
+## Astro Starlight Topics
 
 
 
@@ -447,52 +443,10 @@ The `not-content` CSS class disables Starlight's default, automatic styling (e.g
 
 
 
-### Configure @ Aliases
-
-[Aliases](https://docs.astro.build/en/guides/imports/#aliases) can help improve the development experience in codebases with many directories or relative imports.
-
-1. Open `tsconfig.json` located at the root of your project. Astro projects include a `tsconfig.json` file by default.
-1. Add `baseUrl` and `paths` to the `compilerOptions` object. The `baseUrl` should be set to `.` (the project root), and the `paths` define your aliases. A common setup uses `@/` to point to the `/src/` directory.
-1. Restart your development server to ensure the changes are picked up. 
-
-
-```ts
-{
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/layouts/*": ["src/layouts/*"],
-      "@/assets/*": ["src/assets/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/*": ["src/*"]
-    }
-  }
-}
-```
-
-The above changes this 
-
-```mdx
----
-import Button from '../../components/controls/Button.astro';
----
-```
-
-To this: 
-```mdx
----
-import Button from '@/components/controls/Button.astro';
----
-```
 
 
 
-
-### Override a component 
+### Override a Starlight component 
 
 The most up to date instructions can be found [here](https://starlight.astro.build/guides/overriding-components/). 
 
@@ -528,20 +482,6 @@ export default defineConfig({
 
 
 
+### More Astro Notes 
 
-
-
-### Add Tailwind to Starlight
-
-[Instructions](https://tailwindcss.com/docs/installation/framework-guides/astro)
-
-```
-npx astro add tailwind
-```
-
-:::caution
-Note that Tailwind uses [Preflight](https://tailwindcss.com/docs/preflight) that removes all base styles, including things you might expect to not be removed like [lists](https://tailwindcss.com/docs/preflight#lists-are-unstyled)
-:::
-
-
-
+See [tutorials/astro-svelte](/dig345-radical-software/tutorials/astro-svelte)
