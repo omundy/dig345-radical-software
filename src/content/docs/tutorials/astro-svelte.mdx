@@ -335,6 +335,33 @@ npx @astrojs/upgrade
 
 
 
+### Styling Slotted Content 
+
+> Astro CSS rules are automatically scoped by default. Scoped styles are compiled behind-the-scenes to only apply to HTML written inside of that same component. 
+
+To make CSS work for content inside a slot, [use](https://stackoverflow.com/a/77264517/441878) Astro's `is:global`
+
+```markdown
+<!-- index.mdx -->
+--- 
+--- 
+import Component from '@/components/Component.astro';
+<Component>
+<p>Hello, in red!</p>
+</Component>
+```
+
+```html
+<!-- Component.astro -->
+<div>
+<slot />
+</div>
+
+<style is:global>
+p { background-color: red; }
+</style>
+```
+
 
 
 

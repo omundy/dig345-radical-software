@@ -14,8 +14,8 @@ main ol,
 main ul:not([role='tablist']), /* don't affect tabs*/
 main menu {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-block-start: .5rem;
+    margin-block-end: .5rem;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
 }

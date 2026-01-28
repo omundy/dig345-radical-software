@@ -1,0 +1,108 @@
+---
+const props = Astro.props;
+---
+
+<!-- https://www.w3schools.com/howto/howto_css_modals.asp -->
+<span><a id="myBtn">See DevLog Instructions</a></span>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h5>DevLog Instructions</h5>
+        <ol>
+            <li>
+                Go to <a
+                    href="https://github.com/omundy/dig345-radical-software/tree/main/src/content/docs/schedule"
+                    target="_blank">omundy/dig345-radical-software</a
+                > and copy / paste the markdown code from the list of items in this DevLog into your own.
+            </li>
+            <li>
+                Follow the instructions. Think of them as things you <i
+                    >should be able to do</i
+                > after completing them.
+            </li>
+            <li>Add content where ✏️ prompted.</li>
+            <li>
+                When finished, commit your work and push. Post the link in the
+                appropriate Moodle assignment.
+            </li>
+        </ol>
+    </div>
+</div>
+
+<style>
+    #myBtn {
+        cursor: pointer;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 999999999999999999999999; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        /* background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4); */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 1.5rem;
+        padding-top: 1rem;
+        border: 1px solid #888;
+        width: 30vw;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // @ts-nocheck
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>

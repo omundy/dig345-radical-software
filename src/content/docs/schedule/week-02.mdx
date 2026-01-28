@@ -1,5 +1,5 @@
 ---
-title: Week 2 - Astro.js / Tailwind
+title: Week 2 - Astro.js
 description: DIG 345 course schedule
 # draft: true
 ---
@@ -69,10 +69,7 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 ## 2-2 Astro.js
 
 <CustomAside type="homework" reference="(before class)">
-
 - ✅ Complete DevLog 2-1 and post link on Moodle.
-{/* - Read 📚 xxxx */}
-
 </CustomAside>
 
 <CustomAside type="inclass">
@@ -90,12 +87,10 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 
 
 
-## 2-3 Astro.js + Tailwind
+## 2-3 Astro.js
 
 <CustomAside type="homework">
-
-- ✅ Complete steps 1-5 from DevLog 2-3
-
+- ✅ Complete (at least) steps 1-5 from DevLog 2-3
 </CustomAside>
 
 <CustomAside type="inclass">
@@ -109,24 +104,23 @@ Follow the [Astro Starlight](https://omundy.github.io/dig345-radical-software/tu
 ### DevLog 2-3 
 
 
-import { Icon } from '@astrojs/starlight/components';
+import DevLogInstructions from "@/components/DevLogInstructions.astro";
 
 #### Create an Astro blog site 
 
-Follow [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to create a modular website using component-based design. Copy and paste these instructions into `devlog-2-3` in your DevLog. Then publish it and turn it in by posting the direct link to this DevLog on Moodle.
+Follow [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to create a modular website using component-based design. Compare your finished blog site to the [tutorial example](https://github.com/withastro/blog-tutorial-demo/tree/complete) as needed. <DevLogInstructions />
 
 
-1. Create a new Astro site and publish it on Netlify [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/1-setup/). Add the formatted (backticks) command ✏️ here 
-1. Create pages (`.astro` files) and blog posts (`.md` files) using frontmatter and file-based routing [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/2-pages/). 
-1. Use Astro [components](https://docs.astro.build/en/basics/astro-components/) (also `.astro` files!) to reuse common code across your website [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/3-components/). 
-1. Create reusable layout components using `<slot />` and `Astro.props` to inject child content [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/4-layouts/). 
-1. Create layout components for markdown files
-1. Display a dynamically generated list of posts on your Blog page [<Icon name="document" class="inline-icon" />](https://docs.astro.build/en/tutorial/5-astro-api/). 
+1. Create a new Astro site and publish it on Netlify<sup>[1](https://docs.astro.build/en/tutorial/1-setup/)</sup>. Write the formatted command ✏️ here  using `backticks` so you remember it. 
+1. Create pages (`.astro` files) and blog posts (`.md` files) using frontmatter and file-based routing<sup>[2](https://docs.astro.build/en/tutorial/2-pages/)</sup>. 
+1. Use Astro [components](https://docs.astro.build/en/basics/astro-components/) (also `.astro` files!) to reuse common code across your website<sup>[3](https://docs.astro.build/en/tutorial/3-components/)</sup>. 
+1. Create reusable layout components using `<slot />` and `Astro.props` to inject child content<sup>[4](https://docs.astro.build/en/tutorial/4-layouts/)</sup>. 
+1. Create layout components for markdown files. Share anything that was difficult so far ✏️ here. 
+1. Display a dynamically generated list of posts on your Blog page<sup>[5](https://docs.astro.build/en/tutorial/5-astro-api/)</sup>. 
 1. Use Dynamic page routing with [`getStaticPaths()`](https://docs.astro.build/en/tutorial/5-astro-api/2/) to specify and store static routes during build, and pass each page its own props.
-1. Install an Astro Preact integration. Add a components in their own language. Use a client: directive for hydration on my UI framework component. https://docs.astro.build/en/tutorial/6-islands/1/
-1. Compare your finished blog site to the [tutorial example](https://github.com/withastro/blog-tutorial-demo/tree/complete) (I used Svelte, but it is nearly the same effect)
-1. Modify your site design and content as if you were transitioning to Astro.js from an existing Wordpress site/blog. Duplicate the design, content, structure from the other site (not entirely, mind you, since this is just a mockup).
-
+1. Install Astro [Preact](https://preactjs.com/) integration. Use a `client:` directive for hydration on a UI framework component<sup>[6](https://docs.astro.build/en/tutorial/6-islands/1/)</sup>. 🔥 Challenge: Already have experience with a UI library? Try to [integrate](https://docs.astro.build/en/guides/integrations-guide/) that one instead! For example, I used Svelte.
+1. Modify your site design and content as if you were transitioning to Astro.js from an existing Wordpress site/blog. Duplicate the design, content, structure from the other site (not entirely, mind you, since this is just a mockup). Publish your blog site and put the url ✏️ here.
+1. Copy and paste these instructions into `devlog-2-3.mdx` in your own [DevLog](https://github.com/omundy/dig345-devlog). Publish it. Then turn it in by posting a direct link to the page on Moodle.
 
 
 </div>
