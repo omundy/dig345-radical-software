@@ -1,9 +1,13 @@
 ---
 const props = Astro.props;
+interface Props {
+    filename: string;
+}
+const { filename } = Astro.props;
 ---
 
 <!-- https://www.w3schools.com/howto/howto_css_modals.asp -->
-<span><a id="myBtn">See DevLog Instructions</a></span>
+<span>Copy and paste then complete the following objectives in <code>{filename}</code> in your DevLog (<a id="myBtn">Instructions</a>).</span>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">

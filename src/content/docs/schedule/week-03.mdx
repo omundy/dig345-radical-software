@@ -7,7 +7,7 @@ description: DIG 345 course schedule
 import IconTime from "@/components/IconTime.astro";
 import YoutubeVideo from '@/components/YoutubeVideo.astro';
 import CustomAside from '@/components/CustomAside.astro';
-
+import DevLogInstructions from "@/components/DevLogInstructions.astro";
 
 
 
@@ -52,8 +52,8 @@ Heydon Pickering [What Is React.JS?](https://www.youtube.com/watch?v=BO71b3l22mM
 </figure>
 
 <CustomAside type="inclass">
-1. Class: Share progress, discussion of videos, final project. 
-1. Instructor: Discuss Reactivity, show an Astro + Svelte demo 
+1. Class: Share progress, discussion of videos, [final project](/dig345-radical-software/assignments#final-project). 
+1. Instructor: Discuss Reactivity, show an Astro + Svelte demo. Give hw for week.  
 </CustomAside>
 
 
@@ -70,13 +70,31 @@ Heydon Pickering [What Is React.JS?](https://www.youtube.com/watch?v=BO71b3l22mM
 
 
 
-
-
 ## 3-2 Node/Express
 
 <CustomAside type="homework">
-- Read 📚 Modules 9.2 and 9.3 in Chapter 9 of *Critical Web Design*.
+- Read 📚 "0.2.3 Why Not React, Angular, or Taco?" (below)
+- Read 📚 Chapter 9 of *Critical Web Design* (posted in Slack). 
+- Follow the exercises in Modules 9.2 and 9.3.
 </CustomAside>
+
+
+
+<div class="box-callout border-purple">
+
+> ### 0.2.3 Why Not React, Angular, or Taco?
+>
+> We haven’t mentioned any (currently) popular front-end frameworks. Many tutorials on YouTube and Google focus on using tools like React, Angular, and Taco. These projects are built by big tech companies to maintain complex websites, packed with bells and whistles, and appear to make creating websites almost effortless, even magical. But you should know:
+> - We advise you to be suspicious any time you see people flocking to the “next big thing.” Why? By definition, trends come and go. The recent billionaire-ego-inspired Twitter disaster is proof that these tools are only as stable as the companies that support them. For example, ever heard of an NFT (non-fungible token)? How about Beanie Babies? The fanciful names of today’s fashionable framework (like the “Taco” framework we fabricated in the section title) will eventually fade.
+> - The open technologies that power the web are intended to let you choose how you want to create websites. Projects like Facebook’s React create vendor lock-in, confining you to a proprietary ecosystem that requires you to do everything their way. This teaches you not to code using the best tool, but to create using their tool. And this dependency ultimately manifests loyalty to companies that you may or may not want to support. Throughout the book we show when there are good alternatives to help readers internalize this consideration.
+> - These tools are complex to use—they are built to power enormous applications (e.g., Google Docs), involve a lengthy setup, and have a complicated build process—even though many output plain HTML/CSS/JS. Referencing documentation is confusing because they can be vastly different across releases. Publishing is also murky, often costly, and can cause your entire project to fail because of a single misplaced comma.
+> - React, Angular, Shiny, and other frameworks hide and abstract the underlying code so much that when you get stuck, you are seriously stuck unless you know the fundamentals of HTML/CSS/JS.
+> - We do introduce several technologies on which the so-called modern web is built. The command line, DevTools, ES6, Node/NPM, JavaScript object notation (JSON), Leaflet, APIs, and databases are just some of the tools that we discuss.
+> - Perhaps the most important reason this book is focused on the foundations of designing and coding for the web is because we want readers to come away with a solid understanding of how the web works. A firm grounding in the lasting technologies and principles can be applied to nearly any tool, computer language, or technology field. For example, e-books are coded in HTML/CSS, most cross platform desktop and mobile apps use HTML/CSS/JS, and the principles of responsive design and usability apply to interfaces across the web, game development, and screens in cars, household appliances, and electronic billboards.
+
+xtine burrough and Owen Mundy, Critical Web Design (p.15-16), 2026
+
+</div>
 
 
 <figure>
@@ -150,18 +168,18 @@ https://docs.google.com/document/d/1caPqg3nRV4VFWZVMy-ujeGHbPA11CmUReCon8_d8MVQ/
 
 #### Create a full stack application using Node and Express
 
-Create a full stack application following the [Bad Password API Node/Express](https://criticalwebdesign.github.io/wiki/chapter-09/9-4-bad-password-api/) tutorial. Copy/paste and complete the following objectives into `devlog-3-3.mdx` in your DevLog.  
+Create a full stack application following Chapter 9 of Critical Web Design and the [Bad Password API Node/Express](https://criticalwebdesign.github.io/wiki/chapter-09/9-4-bad-password-api/) tutorial. <DevLogInstructions filename="devlog-3-3.mdx" />
 
+1. Read 📚 Chapter 9 in Critical Web Design. ✏️ Write a reflection about the Context for this chapter.
 1. Fork an existing Github project ([criticalwebdesign/bad-password-api-starter](https://github.com/criticalwebdesign/bad-password-api-starter)) (CWD 9.3)
 1. Connect to a remote API and use JSON data in a frontend (CWD 9.3)
 1. Modify the project structure, install dependencies, and run the project. (CWD 9.4) 
-1. Add a static API route using Express.  (CWD 9.4) 
-1. Add dynamic API routes to Express. (CWD 9.4) 
+1. Add static and dynamic API routes using Express.  (CWD 9.4) 
 1. Create a free Vercel account  (CWD 9.4) 
-1. Deploy your project on Vercel. (CWD 9.4) 
+1. Deploy your project on Vercel. (CWD 9.4)  Paste the link ✏️ here 
 1. Read 📚 [Hacktivist deletes white supremacist websites live onstage during hacker conference](https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/), TechCrunch 2026 Post a reading response in your DevLog per information in the [Assignments](./#assignments).
-1. Write a reflection explaining what you learned in your DevLog. Link to sources.
-1. Publish it and turn it in by posting the direct link to this DevLog on Moodle
+1. Write a reflection explaining what you learned in your DevLog. Link to sources. ✏️
+1. Publish it and turn it in by posting the direct link to this DevLog on Moodle. 
 
 </div>
 
