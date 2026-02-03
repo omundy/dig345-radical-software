@@ -1,0 +1,55 @@
+---
+import Icon from "@/components/Icon.astro";
+const props = Astro.props;
+interface Props {
+    week: number;
+}
+let { week } = Astro.props;
+
+// calendar weeks
+const weeks = [
+    "1/21",
+    "1/26",
+    "2/2",
+    "2/9",
+    "2/16",
+    "2/23",
+    "3/2",
+    "3/9", // Spring Break
+    "3/16",
+    "3/23",
+    "3/30",
+    // "4/6", April Break
+    "4/7",
+    "4/13",
+    "4/20",
+    "4/27",
+    "5/4",
+    "5/11",
+];
+
+
+---
+
+<div>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+            fill="currentColor"
+            d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+        ></path><path
+            fill="currentColor"
+            d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2M19 8l.001 12H5V8z"
+        ></path></svg
+    >{weeks[--week]}
+</div>
+
+<style>
+    svg {
+        display: inline-block;
+        margin-right: 0.25rem;
+    }
+</style>
