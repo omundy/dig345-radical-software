@@ -1,5 +1,7 @@
 <script>
+    // Svelte 4 reactive state
     let count = 0;
+    
     function increment() {
         count++;
     }

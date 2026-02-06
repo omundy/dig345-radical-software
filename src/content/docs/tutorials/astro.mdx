@@ -227,10 +227,21 @@ src/pages/tags/index.astro
 
 
 
+
+
+
+
+
+
 ## Astro + Svelte 
 
+Astro supports several types of [integrations](https://docs.astro.build/en/guides/integrations-guide/) to import components in [various languages](https://docs.astro.build/en/guides/framework-components/). 
 
-Astro supports several types of [integrations](https://docs.astro.build/en/guides/integrations-guide/) to import components in [various languages](https://docs.astro.build/en/guides/framework-components/). Follow steps below to add a [svelte integration](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+
+
+### Add Svelte Integration 
+
+Follow steps below to add a [svelte integration](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 
 
 
@@ -288,7 +299,7 @@ import Counter from '@/components/examples/Counter.svelte';
 
 
 
-
+5. Here is another demo component. Find it in the `components/examples` directory of this project and publish it.
 
 import RandomNumber from '@/components/examples/RandomNumber.svelte';
 
@@ -296,6 +307,20 @@ import RandomNumber from '@/components/examples/RandomNumber.svelte';
 
 
 
+
+
+
+:::caution[Svelte vs SvelteKit]
+[Svelte](https://svelte.dev/) is a component framework for building user interfaces, while [SvelteKit](https://svelte.dev/docs/kit/introduction) is a full-featured application framework built on top of Svelte. Svelte handles UI components, and SvelteKit provides the infrastructure—such as routing, server-side rendering (SSR), and data fetching—to build complete web applications. 
+
+Likewise, they have different functionality. For example, we're about to use Javascript's `fetch()`. SvelteKit has [a special version of `fetch()`](https://svelte.dev/docs/kit/web-standards#Fetch-APIs), which will not work with plain Svelte. So it is best to consult the documentation for each project to confirm the references in your code.
+:::
+
+import FetchBadPassword from '@/components/examples/FetchBadPassword.svelte';
+
+<FetchBadPassword url="https://bad-password-api.vercel.app/api/" client:load />
+<FetchBadPassword url="https://bad-password-api.vercel.app/api/common" client:load />
+<FetchBadPassword url="https://bad-password-api.vercel.app/api/custom?params=endearments,dates" client:load />
 
 
 

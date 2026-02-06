@@ -1,5 +1,7 @@
 <script>
+    // Svelte 4 reactive state
     let r = 0;
+    
     function increment() {
         r = Math.ceil(Math.random() * 6);
     }
