@@ -21,7 +21,7 @@
 </script>
 
 <div>
-    <button title="Get new bad password" on:click={fetchData}>
+    <button title="Get new bad password" onclick={fetchData}>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -316,6 +316,10 @@ import RandomNumber from '@/components/examples/RandomNumber.svelte';
 Likewise, they have different functionality. For example, we're about to use Javascript's `fetch()`. SvelteKit has [a special version of `fetch()`](https://svelte.dev/docs/kit/web-standards#Fetch-APIs), which will not work with plain Svelte. So it is best to consult the documentation for each project to confirm the references in your code.
 :::
 
+
+
+6. See the example to use `fetch()` with an API and Svelte's params to pass data to the component.
+
 import FetchBadPassword from '@/components/examples/FetchBadPassword.svelte';
 
 <FetchBadPassword url="https://bad-password-api.vercel.app/api/" client:load />
