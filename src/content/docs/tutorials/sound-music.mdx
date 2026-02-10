@@ -4,7 +4,7 @@ description: Create sound and music with code
 # draft: true
 ---
 
-
+import Icon from "@/components/Icon.astro";
 import CustomAside from '@/components/CustomAside.astro';
 
 <CustomAside type="overview">{frontmatter.description}</CustomAside>
@@ -46,19 +46,20 @@ The HTML `<audio>` element simplays plays pre-recorded audio files within a web 
 
 
 
-
-
 ## Tone.js
 
 [Tone.js](https://tonejs.github.io/) is a Web Audio framework for creating interactive music in the browser.
 
-First, import tone.js in a web page...
+
+### Tone.js Hello, World!
+
+1. After you import tone.js in a web page...
 
 ```html
 <script src="http://unpkg.com/tone"></script>
 ```
 
-Then, you can create a synth to play tones. <button class="tonejs1" style="float:right">Play</button> 
+2. This example creates a synthesizer to play tones.  <button class="btn tonejs1"><Icon type="play" /></button> 
 
 ```js
 // create a synth and connect it to the main output (your speakers)
@@ -68,7 +69,7 @@ synth.triggerAttackRelease("C4", "8n");
 ```
 
 
-This example will play three notes in succession. <button class="tonejs2" style="float:right">Play</button>
+3. This example will play three notes in succession. <button class="btn tonejs2"><Icon type="play" /></button>
 
 ```js
 const synth = new Tone.Synth().toDestination();
@@ -79,7 +80,7 @@ synth.triggerAttackRelease("G4", "8n", now + 1);    // play after 1 s
 ```
 
 
-Tone.js can create oscillators and change the frequency of signals in real time. <button class="tonejs3" style="float:right">Play</button>
+4. This example uses Tone.js oscillators to change the frequency of signals in real time. <button class="btn tonejs3"><Icon type="play" /></button>
 
 ```js
 const osc = new Tone.Oscillator().toDestination();
@@ -114,7 +115,12 @@ osc.start().stop("+3");           // start the oscillator for 2 seconds
   });
 `}</script>  
 
-👉 Explore the [Tone.js introduction](https://tonejs.github.io/) to see more examples. (:05)
+
+
+### More Examples 
+
+- [More examples on Codepen](https://codepen.io/owenmundy/pen/raLoOro?editors=0010)
+- Explore the [Tone.js introduction](https://tonejs.github.io/) to see more examples. (:05)
 
 
 
@@ -124,6 +130,24 @@ osc.start().stop("+3");           // start the oscillator for 2 seconds
 </div>
 [Getting Started with Tone.js | Web Audio Tutorial - Pt.1](https://www.youtube.com/watch?v=ftGuDvm5zDQ&list=PLMPgoZdlPumfkA6iYubXHyrRtdIg9T3Na)
 </figure>
+
+
+
+
+
+
+
+### More Tone.js Topics
+
+- [add instruments to Tone.js](https://github.com/Tonejs/Tone.js/issues/111)
+- Export sound as analog files
+  - Tutorial: [Tone.js & CodePen Part 07: Recording Tone in an Audio File](https://www.youtube.com/watch?v=VHCv3waFkRo) ([example](https://codepen.io/jak_e/pen/QVqgBE/?editors=1010))
+  - [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob)
+  - [My version](https://codepen.io/owenmundy/pen/WNVjWWO?editors=1010) 
+- <a href="https://codepen.io/owenmundy/pen/WNVjWWO">Record tone in audio file</a>
+
+
+
 
 
 
@@ -211,7 +235,7 @@ stack(
 
 
 
-## 👉 Getting started with Strudel
+### 👉 Getting started with Strudel
 
 You don't have to know much about music (trust me!) to start using Studel:
 
@@ -246,7 +270,7 @@ sound("casio")
 
 
 
-## 👉 Strudel drum machine
+### 👉 Strudel drum machine
 
 
 1. Many music software use *bpm* (beats per minute), [Strudel](https://strudel.cc/understand/cycles/) (like [Tidal](https://tidalcycles.org/docs/reference/cycles/)) uses *cycles* to set music tempo. By default a cycle plays 30 times per minute (every 2 seconds or `.5` times per second). Press play below and you will hear a *bass drum* (kick) playing at 30 bpm (1 beat per cycle).
@@ -280,7 +304,7 @@ sound("bd")
 
 
 
-## Strudel Synth
+### Strudel Synth
 
 In addition to the [sampling](https://strudel.cc/learn/samples/) engine and [MIDI control](https://strudel.cc/learn/input-output/), strudel comes with a [synthesizer](https://strudel.cc/learn/synths/) to create sounds on the fly.
 
@@ -314,7 +338,7 @@ note("c e g b g e")
 
 
 
-## 👉 Continue learning
+### 👉 Continue learning
 
 1. Strudel has an [excellent tutorial](https://strudel.cc/workshop/getting-started/) that introduces several fundamentals of the language and making music in general. 
 
@@ -324,7 +348,7 @@ note("c e g b g e")
 
 
 
-## More Strudel samples
+### More Strudel samples
 
 
 
@@ -368,7 +392,7 @@ Run this one in your browser on your phone to control it with [device motion](ht
 
 
 
-## Explore works by others using Strudel
+### Works by others using Strudel
 
 import YoutubeVideo from '@/components/YoutubeVideo.astro';
 
