@@ -46,109 +46,6 @@ The HTML `<audio>` element simplays plays pre-recorded audio files within a web 
 
 
 
-## Tone.js
-
-[Tone.js](https://tonejs.github.io/) is a Web Audio framework for creating interactive music in the browser.
-
-
-### Tone.js Hello, World!
-
-1. After you import tone.js in a web page...
-
-```html
-<script src="http://unpkg.com/tone"></script>
-```
-
-2. This example creates a synthesizer to play tones.  <button class="btn tonejs1"><Icon type="play" /></button> 
-
-```js
-// create a synth and connect it to the main output (your speakers)
-const synth = new Tone.Synth().toDestination();
-// play a middle 'C' for the duration of an 8th note
-synth.triggerAttackRelease("C4", "8n");
-```
-
-
-3. This example will play three notes in succession. <button class="btn tonejs2"><Icon type="play" /></button>
-
-```js
-const synth = new Tone.Synth().toDestination();
-const now = Tone.now();                             // save current time
-synth.triggerAttackRelease("C4", "8n", now);        // play now
-synth.triggerAttackRelease("E4", "8n", now + 0.5);  // play after 500 ms
-synth.triggerAttackRelease("G4", "8n", now + 1);    // play after 1 s
-```
-
-
-4. This example uses Tone.js oscillators to change the frequency of signals in real time. <button class="btn tonejs3"><Icon type="play" /></button>
-
-```js
-const osc = new Tone.Oscillator().toDestination();
-osc.frequency.value = "C4";       // start at "C4"
-osc.frequency.rampTo("C2", 2);    // ramp to "C2" over 2 seconds
-osc.start().stop("+3");           // start the oscillator for 2 seconds
-```
-
-<script src="http://unpkg.com/tone"></script>
-<script>{`
-  document.querySelector(".tonejs1").addEventListener("click", ()=>{
-    // create a synth and connect it to the main output (your speakers)
-    const synth = new Tone.Synth().toDestination();
-    // play a middle 'C' for the duration of an 8th note
-    synth.triggerAttackRelease("C4", "8n");
-  })
-  document.querySelector(".tonejs2").addEventListener("click", ()=>{
-    const synth = new Tone.Synth().toDestination();
-    const now = Tone.now();
-    synth.triggerAttackRelease("C4", "8n", now);
-    synth.triggerAttackRelease("E4", "8n", now + 0.5);
-    synth.triggerAttackRelease("G4", "8n", now + 1);
-  });
-  document.querySelector(".tonejs3").addEventListener("click", ()=>{
-    const osc = new Tone.Oscillator().toDestination();
-    // start at "C4"
-    osc.frequency.value = "C4";
-    // ramp to "C2" over 2 seconds
-    osc.frequency.rampTo("C2", 2);
-    // start the oscillator for 2 seconds
-    osc.start().stop("+3");
-  });
-`}</script>  
-
-
-
-### More Examples 
-
-- [More examples on Codepen](https://codepen.io/owenmundy/pen/raLoOro?editors=0010)
-- Explore the [Tone.js introduction](https://tonejs.github.io/) to see more examples. (:05)
-
-
-
-<figure>
-<div class="max-w-3xl mx-auto not-content">
-  <YoutubeVideo src="https://www.youtube.com/watch?v=ftGuDvm5zDQ&list=PLMPgoZdlPumfkA6iYubXHyrRtdIg9T3Na" />
-</div>
-[Getting Started with Tone.js | Web Audio Tutorial - Pt.1](https://www.youtube.com/watch?v=ftGuDvm5zDQ&list=PLMPgoZdlPumfkA6iYubXHyrRtdIg9T3Na)
-</figure>
-
-
-
-
-
-
-
-### More Tone.js Topics
-
-- [add instruments to Tone.js](https://github.com/Tonejs/Tone.js/issues/111)
-- Export sound as analog files
-  - Tutorial: [Tone.js & CodePen Part 07: Recording Tone in an Audio File](https://www.youtube.com/watch?v=VHCv3waFkRo) ([example](https://codepen.io/jak_e/pen/QVqgBE/?editors=1010))
-  - [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob)
-  - [My version](https://codepen.io/owenmundy/pen/WNVjWWO?editors=1010) 
-- <a href="https://codepen.io/owenmundy/pen/WNVjWWO">Record tone in audio file</a>
-
-
-
-
 
 
 
@@ -165,12 +62,13 @@ osc.start().stop("+3");           // start the oscillator for 2 seconds
 
 - Strudel is a live coding platform that lets you write expressive dynamic music in the browser. 
 - Strudel is a JavaScript port of [tidalcycles](https://tidalcycles.org/), a popular live coding language for music. Both are free/open source software.
-- Click play on embedded examples or press the REPL button to open them in the interactive [Strudel REPL](https://strudel.cc), then continue on for a tutorial.
 
 
 
+### Usage
 
-
+- Click play/stop to sample embedded examples below.
+- Click the REPL button to open any example in the interactive [Strudel REPL](https://strudel.cc) (Read-Eval-Print Loop), then continue on for a tutorial.
 
 
 <style>{`
@@ -431,4 +329,113 @@ Also, check out the [Strudel showcase](https://strudel.cc/intro/showcase/)
 - [tonematrix.audiotool.com](https://tonematrix.audiotool.com/)
 - [Touch Designer](https://derivative.ca/)
 
+
+
+
+
+
+
+
+## Tone.js
+
+[Tone.js](https://tonejs.github.io/) is a Web Audio framework for creating interactive music in the browser.
+
+
+### Tone.js Hello, World!
+
+1. After you import tone.js in a web page...
+
+```html
+<script src="http://unpkg.com/tone"></script>
+```
+
+2. This example creates a synthesizer to play tones.  <button class="btn tonejs1"><Icon type="play" /></button> 
+
+```js
+// create a synth and connect it to the main output (your speakers)
+const synth = new Tone.Synth().toDestination();
+// play a middle 'C' for the duration of an 8th note
+synth.triggerAttackRelease("C4", "8n");
+```
+
+
+3. This example will play three notes in succession. <button class="btn tonejs2"><Icon type="play" /></button>
+
+```js
+const synth = new Tone.Synth().toDestination();
+const now = Tone.now();                             // save current time
+synth.triggerAttackRelease("C4", "8n", now);        // play now
+synth.triggerAttackRelease("E4", "8n", now + 0.5);  // play after 500 ms
+synth.triggerAttackRelease("G4", "8n", now + 1);    // play after 1 s
+```
+
+
+4. This example uses Tone.js oscillators to change the frequency of signals in real time. <button class="btn tonejs3"><Icon type="play" /></button>
+
+```js
+const osc = new Tone.Oscillator().toDestination();
+osc.frequency.value = "C4";       // start at "C4"
+osc.frequency.rampTo("C2", 2);    // ramp to "C2" over 2 seconds
+osc.start().stop("+3");           // start the oscillator for 2 seconds
+```
+
+<script src="http://unpkg.com/tone"></script>
+<script>{`
+  document.querySelector(".tonejs1").addEventListener("click", ()=>{
+    // create a synth and connect it to the main output (your speakers)
+    const synth = new Tone.Synth().toDestination();
+    // play a middle 'C' for the duration of an 8th note
+    synth.triggerAttackRelease("C4", "8n");
+  })
+  document.querySelector(".tonejs2").addEventListener("click", ()=>{
+    const synth = new Tone.Synth().toDestination();
+    const now = Tone.now();
+    synth.triggerAttackRelease("C4", "8n", now);
+    synth.triggerAttackRelease("E4", "8n", now + 0.5);
+    synth.triggerAttackRelease("G4", "8n", now + 1);
+  });
+  document.querySelector(".tonejs3").addEventListener("click", ()=>{
+    const osc = new Tone.Oscillator().toDestination();
+    // start at "C4"
+    osc.frequency.value = "C4";
+    // ramp to "C2" over 2 seconds
+    osc.frequency.rampTo("C2", 2);
+    // start the oscillator for 2 seconds
+    osc.start().stop("+3");
+  });
+`}</script>  
+
+
+
+### Tutorial
+
+Complete this series to create an interactive synth in Tone.js
+
+<figure>
+<div class="max-w-3xl mx-auto not-content">
+  <YoutubeVideo src="https://www.youtube.com/watch?v=ftGuDvm5zDQ&list=PLMPgoZdlPumfkA6iYubXHyrRtdIg9T3Na" />
+</div>
+[Getting Started with Tone.js | Web Audio Tutorial - Pts 1-5](https://www.youtube.com/watch?v=ftGuDvm5zDQ&list=PLMPgoZdlPumfkA6iYubXHyrRtdIg9T3Na) (3:31, 6:37, 10:20, 5:59, 9:28)
+</figure>
+
+
+
+### More Examples 
+
+- [Basic Tone.js starter](https://codepen.io/owenmundy/pen/ZYOdWrV?editors=1010) on Codepen
+- [More Tone.js examples on Codepen](https://codepen.io/owenmundy/pen/raLoOro?editors=0010)
+- Explore the [Tone.js introduction](https://tonejs.github.io/) to see more examples. (:05)
+
+
+
+
+
+### More Tone.js Topics
+
+- [add instruments to Tone.js](https://github.com/Tonejs/Tone.js/issues/111)
+- Export sound as analog files
+  - Tutorial: [Tone.js & CodePen Part 07: Recording Tone in an Audio File](https://www.youtube.com/watch?v=VHCv3waFkRo) ([example](https://codepen.io/jak_e/pen/QVqgBE/?editors=1010))
+  - [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob)
+  - [My version](https://codepen.io/owenmundy/pen/WNVjWWO?editors=1010) 
+- <a href="https://codepen.io/owenmundy/pen/WNVjWWO">Record tone in audio file</a>
 
