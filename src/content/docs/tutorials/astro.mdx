@@ -9,7 +9,12 @@ description: Create an Astro website with Svelte dynamic islands and publish it 
 ## Create an Astro project
 
 1. Create a folder. Drag it into VS Code to open the project. 
-1. In the VS Code terminal, run `npm create astro@latest` and follow the wizard:
+1. In the VS Code terminal run
+
+```bash
+npm create astro@latest
+``` 
+1. Follow the wizard:
     1. Where should we create your new project? `./`
     1. How would you like to start your new project? `Use minimal (empty) template`
     1. Install dependencies? `Yes`
@@ -184,6 +189,10 @@ export default defineConfig({
 ### Update base urls for Github Pages 
 
 99% of websites at Github Pages are published inside folders in a subdomain. For example, the domain for the site you are view ing is `https://omundy.github.io` while the folder is `/dig345-radical-software`. Unless you are publish directly to a domain (the repo name is your username, e.g. `omundy.github.io`), you need to change the internal links in your site so it can be published at Github Pages. 
+
+:::caution 
+These steps assume you have followed [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
+:::
 
 1. Open the following files and add `const base = import.meta.env.BASE_URL;` to end of the frontmatter in each file. 
 
