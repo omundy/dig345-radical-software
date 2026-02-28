@@ -36,6 +36,11 @@
       url: "https://scratch.mit.edu/ideas",
       level: "🎲🎲🎲",
     },
+    {
+      name: "Video Game Generator (from the team that created CookieClicker)",
+      url: "https://orteil.dashnet.org/gamegen",
+      level: "🎲🎲🎲",
+    },
   ];
 
   // 2. Shuffle array, create index to know when to shuffle again
