@@ -28,14 +28,14 @@ import Icon from "@/components/Icon.astro";
 <div class="not-content callout-intro">
     {( type != "none") &&
     <Icon {type} color="black" weight="600">
-        <!-- inject html -->
+        {/* inject html */}
         <Fragment set:html={titles[type]} />
     </Icon>
 }
     {reference && reference}
 
-    <!-- NO REFERENCE = ONE LINE -->
     {
+        // NO REFERENCE = ONE LINE
         oneline ? (
             <span class="componenttext">
                 <slot />
