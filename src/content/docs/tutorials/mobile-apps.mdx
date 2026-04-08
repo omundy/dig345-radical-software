@@ -1,0 +1,146 @@
+---
+title: Mobile Apps
+description: An overview of mobile apps build with Javascript 
+# draft: true
+---
+
+
+:::caution[TO DO]
+1. Tutorialize this page
+1. Add sample application
+:::
+
+
+
+import { Icon } from '@astrojs/starlight/components';
+
+import CustomAside from '@/components/CustomAside.astro';
+
+<CustomAside type="overview">{frontmatter.description}</CustomAside>
+
+external
+
+type | built with | pros | cons | <Icon name="external" /> 
+--- | --- | --- | --- | ---
+Progressive web apps (PWAs) | run in a browser | simple to build | close the browser and app stops | [examples](https://business.adobe.com/blog/basics/progressive-web-app-examples)
+Native apps | require platform-specific languages (Swift (iOS), Kotlin (Android)) | access to full device functionality | two completely separate code bases | [examples](https://www.mightynetworks.com/resources/native-app)
+Web wrapper (hybrid) apps | HTML, CSS, JavaScript [in a native container](https://nextnative.dev/blog/capacitor-vs-react-native#the-capacitor-webview-model) | one codebase for multiple platforms | web views can have performance issues | [examples](https://medium.com/@kshields/10-best-hybrid-app-examples-62c07710ca46)
+Native frameworks | JS, TS, React | native API access, good performance | vendor lock-in, version compatibility issues | [examples](https://github.com/ReactNativeNews/React-Native-Apps)
+
+<figure>
+This table provides an overview of methods for running apps on mobile.
+</figure>
+
+
+
+
+## Framework Summaries 
+
+
+<details>
+<summary>Web Wrapper Frameworks</summary>
+
+An efficient way to build Android and iOS applications with access device APIs (camera, geolocation).
+
+  - [Flutter](https://flutter.dev/) by Google - Requires learning Dart
+  - [Apache Cordova](https://cordova.apache.org/) - Not actively developed
+  - Ionic / [Capacitor](https://capacitorjs.com/) allows for other frameworks like [Svelte](https://capacitorjs.com/solution/svelte). The future seems questionable
+  - [And more...](https://jscrambler.com/blog/12-frameworks-for-mobile-hybrid-apps)
+
+</details>
+
+<details>
+<summary>Native Frameworks</summary>
+
+- React Native (see below)
+- [NativeScript](https://nativescript.org/) uses TypeScript and allows Vue, Angular, or Svelte, [previewing apps](https://preview.nativescript.org/) (like Expo). See [documentation](https://docs.nativescript.org/guide/running) and [opinions](https://www.reddit.com/r/vuejs/comments/1ou794y/what_do_i_lose_using_vuenativescript_rather_than/)  
+
+</details>
+
+
+
+
+
+
+## React Native
+
+While complex, [React Native](https://reactnative.dev/) is considered to be one of the most flexible options developers to build cross-platform, natively rendered applications. 
+- Apps can run on iOS, Android, Windows, and macOS from a single codebase.
+- A JS thread handles logic, state, and component structure, passing rendering updates using Fabric to the native UI thread which draws components on the screen.
+
+
+### React Native Basics 
+
+For more information on React see Codecademy's [Learn React Native](https://www.codecademy.com/enrolled/courses/learn-react-native) and React Native's [Learn the Basics](https://reactnative.dev/docs/tutorial) 
+
+
+
+
+```js 
+// App.tsx
+import React from 'react';
+import { View, Text } from 'react-native';
+
+export default function App() {
+  return (
+    <View>
+      <Text style={{}}>Welcome to React Native!</Text>   
+    </View>
+  );
+}
+```
+<figure>
+Views are foundational to mobile UI. In React Native, the `<View>` component provides structure and a wrapper for other UI elements. In this basic example, we import the View and Text components, then use them inside the return value from `App()`
+</figure>
+
+
+
+
+```js 
+import { useState, useEffect } from 'react';
+import { View, Text, Button } from 'react-native';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // This runs after the first render, and when the count changes
+    console.log(`Count changed to: ${count}`);
+  }, [count]);
+
+  return (
+    <View>
+      <Text>Count: {count}</Text>
+      <Button title="Increment" onPress={() => setCount(count + 1)} />
+    </View>
+  );
+}
+```
+
+
+
+
+## Expo 
+
+[Expo](https://expo.dev/) is a framework, platform, and a set of tools for different stages of React Native app development:
+
+- Expo Go: A client app for testing without building
+- Expo SDK: Set of prebuilt native modules
+- Expo CLI: Command-line tools for project management
+- [Expo Snack](https://snack.expo.dev/): Online React Native playground for prototyping and sharing React Native code
+- [EAS (Expo Application Services)](https://docs.expo.dev/build/introduction/): Cloud-based tools for app builds and updates
+
+
+{/* - Expo has an App store, similar to the Apple App or Google Play store.  */}
+
+
+
+### Build & Publish with Expo
+
+[How To Publish Expo React Native App to iOS and Android - Pagepro](https://pagepro.co/blog/publishing-expo-react-native-app-to-ios-and-android/)
+
+Overview
+Create the app
+Build the app
+Sign the app
+Publish the app
