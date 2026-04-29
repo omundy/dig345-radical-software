@@ -27,19 +27,25 @@ npm create astro@latest
 
 
 
-## Astro Files 
+## Astro Basics
 
-Astro files can be used to: 
+
+
+
+
+### .astro Files 
+
+Astro files are rendered in HTML as whole pages or partials. Use them to: 
 
 1. Create files for your website: `index.astro`
 1. Create components that can be reused throughout your website. 
-1. Create layout files that can insert other content into `<slots />`
+1. Create reusable layout files to display other content `<slots />`
 
 
 
 
 
-## Astro Components
+### Components
 
 Astro components are the basic building blocks of any Astro project.
 
@@ -65,7 +71,7 @@ import HelloComponent from "./HelloComponent.astro";
 
 
 
-## Javascript in Astro 
+### Using Javascript
 
 Inside a `.astro` file: 
 
@@ -100,12 +106,56 @@ const pageTitle = "Home";
 
 
 
+### Adding images 
+
+
+
+#### Location 
+
+- Store image assets in `src/` to allow Astro to optimize and bundle them.
+- Files in `public/` are not processed.
+
+##### Images in `.astro` files
+
+```astro
+<!-- file.astro -->
+import { Image } from 'astro:assets';
+import rocket from '../assets/rocket.png';
+
+<!-- 2 methods -->
+<Image src={rocket} alt="A rocketship in space." />
+<img src={rocket.src} alt="A rocketship in space." />
+```
+
+##### Images in `.md` files
+
+```md
+<!-- file.md -->
+<!-- Local image stored in src/assets/ -->
+<!-- 1 method -->
+![A starry night sky.](../assets/stars.png)
+```
+
+##### Images in `.mdx` files
+
+```mdx
+<!-- file.mdx -->
+import { Image } from 'astro:assets';
+import rocket from '../assets/rocket.png';
+
+<!-- 3 methods -->
+<Image src={rocket} alt="A rocketship in space." />
+<img src={rocket.src} alt="A rocketship in space." />
+![A rocketship in space](../assets/rocket.png)
+```
+
+For images stored in `/public` or more details, see [the full API reference](https://docs.astro.build/en/guides/images/).
 
 
 
 
 
-## Astro routing 
+### Routing 
 
 A function to generate multiple, prerendered page routes from a single .astro page component with one or more parameters in its file path. Use this for routes that will be created at build time, also known as static site building.
 https://docs.astro.build/en/reference/routing-reference/#getstaticpaths
@@ -113,8 +163,12 @@ https://docs.astro.build/en/reference/routing-reference/#getstaticpaths
 
 
 
-## Astro Islands 
+### Dynamic Islands 
 
+import { Image } from 'astro:assets';
+import astroIslands from '@/assets/images/astro-islands.png';
+
+<Image src={astroIslands} alt="astro islands" />
 
 https://docs.astro.build/en/concepts/islands/#client-islands
 
@@ -136,7 +190,7 @@ Even if most of your site is static, you can use dynamic data and reactive frame
 ## Astro Tutorials 
 
 - Follow [Astro's Build a Blog tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to create a modular website using component-based design.
-
+- [Migrate to Astro.js from Wordpress](/dig345-radical-software/tutorials/astro-wordpress/)
 
 
 
@@ -390,18 +444,32 @@ Allow non-technical editors to manage content on your Astro site. Some notable C
 ### Astro Technical Notes 
 
 
-### Typescript
+### Typescript Tips
 
-- [Add `// @ts-nocheck` to the top of the `<script>` tag](https://stackoverflow.com/a/77722897/441878) (the client side script) to silence all the Typescript errors in your `.astro` files. It saves from adding `// @ts-ignore` to each line.
+- [Add `// @ts-nocheck` to the top of the `<script>` tag](https://stackoverflow.com/a/77722897/441878) (the client side script) to silence all the Typescript errors in your `.astro` files. Or, add `// @ts-ignore` to each line.
 
 
 
 
 ### Upgrade Astro 
 
-```bash
-# Upgrade Astro and official integrations together
+1. Upgrade Astro and official integrations together (same for [Starlight](https://starlight.astro.build/getting-started/#updating-starlight))
+
+```
 npx @astrojs/upgrade
+```
+
+2. Run `rm -rf node_modules package-lock.json && npm install` to delete lockfile and dependencies, reinstall forces npm to detect current platform
+3. Run `npm install` to reinstall all packages 
+4. Run `npx astro sync` to [regenerate astro typescript types](https://docs.astro.build/en/reference/cli-reference/#astro-sync)
+
+
+
+### Check Astro 
+
+```
+npm install -D @astrojs/check
+npm run astro check
 ```
 
 
@@ -494,3 +562,10 @@ To this:
 import Button from '@/components/controls/Button.astro';
 ---
 ```
+
+
+
+
+## Starlight Support 
+
+https://discord.com/channels/830184174198718474/1070481941863878697
